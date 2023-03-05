@@ -8,19 +8,30 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+|    `Nome`: Marcelo Belchior  | `Profissão`: Aposentado e empreendedor      |     `Idade`: 68 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Otimizar tempo <br> <br> Facilidade em controle de itens  <br> <br>  |  `Frustrações`: <br>  Tem perdas com armazenamento ruim <br> <br> Tem perdas com pequenos furtos <br><br> Longa espera para o atendimento            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Ler  <br><br> Jogos de mesa <br><br> Conversar com as pessoas <br> <br>        | Fez uso de empréstimo para iniciar seu negócio na área de agro. Está no mercado a 3 anos, tem poucos funcionário e tem tido prejuízos com cancelamentos de vendas.   <br>        | Esforçado <br><br> Sério <br><br> Sábio  <br>    |
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+|    `Nome`: Mario José Dantas  | `Profissão`: Estudante e jovem empreendedor      |     `Idade`: 21 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/222973348-1fd5e103-a66e-4e6b-b437-f50e022a16c2.png">| `Motivações`: <br>  Maior agilidade na venda <br> <br> Facilidade no controle de seus produtos  <br> <br>  |  `Frustrações`: <br>  Não sabe se ha produto para suprir as vendas <br> <br> Desorganizado na armazenagem de produtos <br><br>            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+|  <br><br> Video Games <br><br> Conhecer lugares novos <br> <br> Novas tecnologias <br> <br>        | Está cursando design e criou uma marca de produtos próprios. Optou por criar uma loja virtual para ter mais foco na produção de produtos de sua marca. Busca por tecnologias para auxiliar no seu projeto    <br>        | Brincalhão <br><br> Alegre <br>   |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|    `Nome`: Juliana Silveira Brancis  | `Profissão`: Dona de loja de cosméticos      |     `Idade`: 38 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/55036173/188963711-7db4ab2c-ea9d-4674-83e6-b1c8f8f4fb90.png">| `Motivações`: <br> Facilidade em adequar as vendas <br> <br> Facilidade em previsibilidade  <br>  <br> Facilidade com controle de itens <br>  |  `Frustrações`: <br>  Perdas com atraso na entrega <br> <br> Desorganizada com envio das mercadorias <br><br>            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+|  <br><br> Passear em lugares abertos <br><br> assistir filmes <br> <br> Novas tecnologias <br> <br>        | É solteira e abriu uma loja de cosméticos de produtos naturais. Possui funcionários e sistema de entrega próprio    <br>        | Esforçada  <br><br> Persistente <br>   |
+
+|    `Nome`: Flávia Ribeiro   | `Profissão`: Recém formada em administração      |     `Idade`: 35 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/222974431-3190a1ed-817a-4751-90fd-624a85123ee7.png">| `Motivações`: <br> Sistema de fácil interação <br> <br> Facilidade no processo de compras  <br>   |  `Frustrações`: <br> Não tem experiência com negócio próprio <br> <br>   <br><br>            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+|  <br><br> Estudar <br><br> caminhar <br> <br> Viajar <br> <br>        | É Formada em administração, casada e tem 1 finho. Recentemente, iniciou um trabalho em uma agência bancária e gostaria de ajudar nos negócios de seus pais. <br>        | Insegura  <br><br> Inconstante <br>   |
+
 
 ## Histórias de Usuários
 
