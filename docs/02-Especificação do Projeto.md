@@ -79,15 +79,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| A tela inicial deverá apresentar informações de como utilizar o sistema e suas respectivas funcionalidades  | MÉDIA | 
+|RF-002| A aplicação deve gerenciar empresas. Para uma empresa se cadastrar deverá fornecer: Razão social, Cnpj e Endereço   | ALTA |
+|RF-003| A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não   | ALTA |
+|RF-004| A aplicação deverá listar os itens próximos a vencer    | MÉDIA |
+|RF-005| Deverá ser exibido informações sobre o item cadastrado    | ALTA |
+|RF-006| A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade     | ALTA |
+|RF-007| Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)      | ALTA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O app deverá funcionar em dispositivos Android  | ALTA | 
+|RNF-002| O app deverá seguir as normas da LGPD  |  ALTA | 
+|RNF-003| O app deverá ser desenvolvido usando React Native   |  ALTA | 
+|RNF-004| A tela de itens cadastrados deverá ser renderizada em 5 segundos ou menos |  MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
