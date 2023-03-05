@@ -1,6 +1,8 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O controle de estoque é o processo de monitoramento e gerenciamento de todos os itens que uma empresa armazena em suas dependências (VITÓRIA, 2023). Um controle de estoque é uma chave crucial para o sucesso de um negócio, esta não pode ser limitada a somente a checklist, realidade em muitos lugares. Quaisquer falhas, portanto, podem trazer prejuízos ao negócio e impactos produtivos.
+Por isso empresas que aspiram o sucesso tem um bom controle de seus estoques, utilizando-se de muitos recursos inovadores e tecnológicos, alcançando eficiência e crescimento da mesma.
+
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -16,31 +18,24 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo geral desse projeto é a criação de uma aplicação que apresente ferramentas de fácil uso e fácil controle de estoque para minimizar perdas gerais.
+Como objetivos específicos, podemos ressaltar:
+> -	Fornecer um meio fácil e rápido em monitoramento de entradas de produtos.
+> -	Fornecer controle de saídas de produtos, seja por venda ou outros motivos.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+É impossível não perceber o impacto da tecnologia nas etapas da gestão de um negócio. A cada ano, se ver crescer a buscar por recursos tecnológicos para a gestão empresarial.
+Segundo VMISecurity um dos maiores desafios enfrentados pelas empresas no quesito controle de estoque é, sem dúvidas, a utilização de processos manuais. Muitos negócios ainda insistem em empregar metodologias antigas, sem nenhum tipo de automação e totalmente dependentes dos recursos humanos. Nesse sentido, com a tecnologia se fazendo mais necessária, a utilização de recurso tecnológicos é fundamental para o resultado de qualquer negócio.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Estabeleceu-se como público-alvo desta solução todo negócio que tem estoque, seja este fabricante ou distribuidora de um produto, bem mesmo prestador de um serviço.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+##  Referências
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Controle de estoque: o que é, importância e como fazer. [S. l.], 25 abr. 2022. Disponível em: https://ecommercenapratica.com/blog/controle-de-estoque/#Por_que_o_controle_de_estoque_e_tao_importante. Acesso em: 23 fev. 2023.  
+
+Quais são os desafios da gestão de estoque? [S. l.]. Disponível em: https://vmisecurity.com/pt-br/impacto-da-tecnologia-no-controle-de-estoque/. Acesso em: 23 fev. 2023.  
+
