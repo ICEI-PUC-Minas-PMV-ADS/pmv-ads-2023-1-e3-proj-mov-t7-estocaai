@@ -80,12 +80,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| A tela inicial deverá apresentar informações de como utilizar o sistema e suas respectivas funcionalidades  | MÉDIA | 
-|RF-002| A aplicação deve gerenciar empresas. Para uma empresa se cadastrar deverá fornecer: Razão social, Cnpj e Endereço   | ALTA |
-|RF-003| A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não   | ALTA |
-|RF-004| A aplicação deverá listar os itens próximos a vencer    | MÉDIA |
-|RF-005| Deverá ser exibido informações sobre o item cadastrado    | ALTA |
-|RF-006| A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade     | ALTA |
-|RF-007| Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)      | ALTA |
+|RF-002| A aplicação deve gerenciar empresas. Para uma empresa se cadastrar deverá fornecer: Razão social, Cnpj, Endereço e senha   | MÉDIA |
+|RF-003| A aplicação deve gerenciar empresas. Para uma empresa logar no sistema deverá fornecer Cnpj e senha   | MÉDIA |
+|RF-004| A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não   | ALTA |
+|RF-005| A aplicação deverá listar os itens próximos a vencer    | MÉDIA |
+|RF-006| Deverá ser exibido informações sobre o item cadastrado    | ALTA |
+|RF-007| A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade     | ALTA |
+|RF-008| Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)      | ALTA |
 
 ### Requisitos não Funcionais
 
