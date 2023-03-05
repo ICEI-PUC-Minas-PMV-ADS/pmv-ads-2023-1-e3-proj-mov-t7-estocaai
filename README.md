@@ -12,8 +12,10 @@ O objetivo geral desse projeto é a criação de uma aplicação de controle de 
 
 * Guilherme Correa Gomes
 * Lucas de Oliveira Borges
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Cristiano Ferreira de Mattos
+* Vinicius Monteiro Fortino
+* Fellipe Henrique pastor pereira
+* João Pedro Santos
 
 ## Orientador
 
