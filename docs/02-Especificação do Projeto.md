@@ -145,9 +145,9 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura a seguir.
 
-[Matriz de rastreabilidade]![Matriz](https://user-images.githubusercontent.com/58198111/222971807-f0300e83-0937-432a-946a-4f6955002c8f.PNG)
+[Matriz](https://user-images.githubusercontent.com/58198111/222971807-f0300e83-0937-432a-946a-4f6955002c8f.PNG)
 
 
 > **Links Úteis**:
