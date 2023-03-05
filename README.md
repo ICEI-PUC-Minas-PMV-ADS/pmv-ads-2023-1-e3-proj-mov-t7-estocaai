@@ -6,7 +6,7 @@
 
 `3º SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral desse projeto é a criação de uma aplicação de controle de estoque que apresente ferramentas de fácil uso, com o objetivo de minimizar danos por falta de controle nas empresas.
 
 ## Integrantes
 
@@ -17,7 +17,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Orientador
 
-* Nome completo do professor 1
+* Vitor Mangaravite
 
 ## Instruções de utilização
 
