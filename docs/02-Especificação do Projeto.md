@@ -160,22 +160,21 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
-
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
-
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
-
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+O projeto será organizado em cronograma utilizando o modelo do gráfico de Gantt, possibilitando um controle visual mais fácil com previsão de sobreposição de tarefas não interdependentes.
+![image](https://user-images.githubusercontent.com/100283917/222967557-89def5d6-eea0-49f2-8eba-aa56a1dbad33.png)
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+O projeto contará com uma equipe de seis integrantes focados oito horas por dia, sete dias da semana, folgando aos domingos. Como as tarefas para cada integrante são distintas, colocou-se os dias sem atividade específica como apoio para outros membros da equipe e reuniões de alinhamento de projeto.
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![image](https://user-images.githubusercontent.com/100283917/222967581-86930c9e-d46f-44c6-b5b4-d34b3ea8c0ca.png)
+![image](https://user-images.githubusercontent.com/100283917/222967588-b3a1d891-33ad-4269-bf57-c31595a51c92.png)
+
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Os custos foram estimados via pesquisa de mercado e através das plataformas da Microsoft. Não estão inclusos o capital de giro, seguro de investimento e margem de segurança.
 
-![Orçamento](img/02-orcamento.png)
+![image](https://user-images.githubusercontent.com/100283917/222967622-b9a4612e-f786-493d-9029-ab311e45fba7.png)
+![image](https://user-images.githubusercontent.com/100283917/222967631-63346442-3e0c-4e18-8755-2694edf71a6f.png)
+
