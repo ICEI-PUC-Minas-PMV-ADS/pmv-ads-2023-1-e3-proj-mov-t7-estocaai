@@ -1,15 +1,22 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+A metodologia contempla as definições de ferramentas utilizadas pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Para controle do projeto, das pessoas e das tarefas, utilizaremos poucos ambientes de trabalho, a fim de reduzir/anular as possibilidades de redundância ou ausência de informações em determinados ambientes, focando sempre nos nossos requisitos funcionais.
+
+Nossa ferramenta principal para gerir os tópicos citados acima, será o GitHub, que utilizaremos na sua forma típica de repositório, armazenando toda manutenção dos códigos. Paralelo a esta modalidade de repositório, também será usado para os gerenciamentos de backlog do produto, e das sprints individualizadas, este gerenciamento será feito através da aba “Project”.
+
+O Projeto de interface e wireframes foi desenvolvido através do site Canva, criado de forma que qualquer eventual alteração ou incrementação seja feita de forma prática.
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
-
+|     Ambiente  |    Plataforma      |     Link    |
+|--------------------|------------------------------------|----------------------------------------|
+| Repositório de código fonte | GitHub |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t7-estocaai  
+|  Gerenciamento do Projeto |   GitHub  | aguardando |  
+|  Projeto de Interface e  Wireframes  | Figma  |  https://www.canva.com/design/DAFdIJJgvPI/JDl18NWAIuokLG-SKyn5fA/edit?utm_content=DAFdIJJgvPI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton   |
+|  Reuniões  |  Microsoft Teams  | https://teams.microsoft.com/_#/school/conversations/EstocaAi?threadId=19:7430aa5637384b73ac287b0f4db90d90@thread.tacv2&ctx=channel|
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
@@ -45,18 +52,16 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
-
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+- #### Scrum Master: 
+  - Fellipe Henrique Pastor Pereira
+- #### Product Owner:
+  - Vinicius Monteiro Fortino
+- #### Equipe de Desenvolvimento:
+  - Guilherme Correa Gomes
+  - Cristiano Ferreira de Mattos
+  - João Pedro Pereira Santos
+- #### Equipe de Design:
+  - Lucas de Oliveira Borges
 
 ### Processo
 
@@ -74,14 +79,16 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+#### Editores de código: 
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
+- Visual Studio Code: Ferramenta utilizada para o desenvolvimento do código. Esta possui integração com GitHub.
+- GitHub:  Plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+#### Comunicação e organização:
+
+- Microsoft Teams: Ferramenta utilizada para reuniões.
+- GitHub Projects: Ferramenta utilizada para a organização e distribuição de tarefas do projeto.
+
+#### Ferramentas de Design (wireframing):
+
+- Canva: Ferramenta para criação e edição de wirefremes, esta permite a edição de múltiplas pessoas ao mesmo tempo.
