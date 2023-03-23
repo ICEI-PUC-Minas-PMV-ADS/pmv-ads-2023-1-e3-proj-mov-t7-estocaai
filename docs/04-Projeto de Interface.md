@@ -1,36 +1,40 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+A montagem da interface do sistema foi desenvolvida para proporcionar maior conforto ao usuário, para isso estabelecemos o foco em usabilidade e agilidade, tendo as páginas projetadas para mobile. O projeto também uma identidade visual padronizada em todas as telas que são projetadas para funcionamento em desktops e dispositivos móveis.
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema. Isso permite que o design das interações e fluxos de tela sejam bem planejados e gerem impacto na qualidade do design do wireframe interativo desenvolvido.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
-
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+![absence-request](https://user-images.githubusercontent.com/100283917/227321995-1d01187b-584e-452e-bdba-666a91b22d87.png)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+### Preload Page
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![Preload](https://user-images.githubusercontent.com/100283917/227322928-1917c026-de70-4a28-8d9d-b011f19e4c9b.png)
+
+### SignIn Page
+
+![LogIn](https://user-images.githubusercontent.com/100283917/227322978-0a9207b9-42c8-492e-b4d5-038bfba9c0d7.png)
+
+### SignUp Page
+
+![SignUp](https://user-images.githubusercontent.com/100283917/227323032-b9481a08-ec2c-4539-8201-4496de9a37b5.png)
+
+### Main Page
+
+![tela Principal](https://user-images.githubusercontent.com/100283917/227323067-ead0dee0-67e4-4138-ac83-fd665b6eaa0a.png)
+
+### Rotes 
+
+![rotas](https://user-images.githubusercontent.com/100283917/227323110-7401e263-ccfb-44a1-85d7-78f8a949f000.png)
+
+### User Config Page
+
+![perfil](https://user-images.githubusercontent.com/100283917/227323741-2611a1f0-0aae-42d4-9661-d5d45b202e22.png)
+
+
+
+
