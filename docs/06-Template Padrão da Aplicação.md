@@ -42,3 +42,47 @@ Logotipo
 
 ![Capturar3](https://user-images.githubusercontent.com/100283917/227644735-1614d2da-2c6f-48e2-8969-852b4f719286.PNG)
 
+## Aplicação nas telas:
+
+Abaixo estão representadas as principais telas desenvolvidas, em suas versões para telas maiores e menores, e a explicação de suas funcionalidades.
+
+### Preload page
+
+Ao acessar a aplicação, será verificado se usuário já está logado.
+
+![Preload](https://user-images.githubusercontent.com/100283917/227647757-a45949f1-7f8a-44c1-9da4-672b01de2ff0.png)
+
+### SinIn Page
+
+Na tela login é possivel acessar a aplicação atravéz de um cadastro já efetuado.
+
+![LogIn](https://user-images.githubusercontent.com/100283917/227647906-4218cf92-8b51-47d8-ac14-42079e8e774e.png)
+
+
+### SinUp Page
+
+Para realizar o primeiro acesso na aplicação, o usuário precisa efetuar o cadastro com seus dados pessoais.
+
+![SignUp](https://user-images.githubusercontent.com/100283917/227648053-ccff153a-62dc-4c92-aefa-708c887169a6.png)
+
+### Tela principal
+
+Ao acessar a aplicação, o usuário já poderá cadastrar rotas e acessar demais telas atravéz da Bottom tab.
+
+![tela Principal](https://user-images.githubusercontent.com/100283917/227648787-5a786f68-e4aa-456f-b3d0-6cef2a63b520.png)
+
+
+### Tela de rotas
+
+Tela onde mostrará as telas e também os resultado com a melhor rota.
+
+![rotas](https://user-images.githubusercontent.com/100283917/227652345-103b2400-3df5-4332-8845-c4b55d3962de.png)
+
+
+### Tela de Perfil
+
+Tela onde usuário pode editar seus dados.
+
+![perfil](https://user-images.githubusercontent.com/100283917/227652696-cc87af34-020f-4cb1-97cc-8c520df2df67.png)
+
+
