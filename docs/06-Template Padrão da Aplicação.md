@@ -42,6 +42,13 @@ Logotipo
 
 ![Capturar3](https://user-images.githubusercontent.com/100283917/227644735-1614d2da-2c6f-48e2-8969-852b4f719286.PNG)
 
+Ícones
+
+![Captura9r](https://user-images.githubusercontent.com/100283917/227731027-2b717ba1-3010-48e1-8d32-4ff71d7798ae.PNG)
+![Captura6r](https://user-images.githubusercontent.com/100283917/227731031-40a6dd3f-012e-493e-9ea8-c1c911afc924.PNG)
+![Capturarr4](https://user-images.githubusercontent.com/100283917/227731103-cdb4e50f-f623-4054-a588-3d000d86d81f.PNG)
+
+
 ## Aplicação nas telas:
 
 Abaixo estão representadas as principais telas desenvolvidas, em suas versões para telas maiores e menores, e a explicação de suas funcionalidades.
