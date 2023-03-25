@@ -7,7 +7,7 @@ A montagem da interface do sistema foi desenvolvida para proporcionar maior conf
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema. Isso permite que o design das interações e fluxos de tela sejam bem planejados e gerem impacto na qualidade do design do wireframe interativo desenvolvido.
 
-![absence-request](https://user-images.githubusercontent.com/100283917/227321995-1d01187b-584e-452e-bdba-666a91b22d87.png)
+![_Fluxograma](https://user-images.githubusercontent.com/100283917/227730942-7f97cf42-9439-4025-b9ad-a1f53775e7d8.png)
 
 ## Wireframes
 
