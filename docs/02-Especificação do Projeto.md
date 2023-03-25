@@ -49,23 +49,27 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+A logística é uma das áreas mais críticas de uma empresa, uma vez que envolve a gestão de recursos, transporte e armazenamento de mercadorias. Uma aplicação que calcula rotas pode ajudar a otimizar esse processo, reduzindo os custos e o tempo necessário para transportar as mercadorias de um ponto a outro.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta do EstocaAi é para ser usada para ajudar as empresas ou pequenos empresários a identificar rotas mais eficientes para entregar produtos aos clientes e reduzir o tempo necessário para transportar esses produtos. Isso pode ajudar a reduzir o custo de transporte e aumentar a satisfação do cliente.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – CADASTRO DO USUÁRIO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+![new-bpmn-diagram](https://user-images.githubusercontent.com/100283917/227730791-d301582f-fe3d-432a-8a70-975ff09cebbf.png)
 
-![Processo 1](img/02-bpmn-proc1.png)
+### Processo 2 – GERENCIAR PERFIL
 
-### Processo 2 – NOME DO PROCESSO
+![new-bpmn-diagram (1)](https://user-images.githubusercontent.com/100283917/227730832-66f0c2d3-4be8-46cb-a312-118b97d08fa2.png)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 3 – GERENCIAR ENDEREÇOS
 
-![Processo 2](img/02-bpmn-proc2.png)
+![new-bpmn-diagram (2)](https://user-images.githubusercontent.com/100283917/227730862-bebedc69-a764-4cac-8a10-72b56d1d24ec.png)
+
+### Processo 4 – CALCULAR ROTAS
+
+![absence-request (1)](https://user-images.githubusercontent.com/100283917/227730898-21c675b6-2667-4083-a968-66b6cbc86d2d.png)
 
 ## Indicadores de Desempenho
 
