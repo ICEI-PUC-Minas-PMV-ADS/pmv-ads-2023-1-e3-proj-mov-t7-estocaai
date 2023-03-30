@@ -14,7 +14,7 @@ O Projeto de interface e wireframes foi desenvolvido através do site Canva, cri
 |     Ambiente  |    Plataforma      |     Link    |
 |--------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte | GitHub |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t7-estocaai  
-|  Gerenciamento do Projeto |   GitHub  | aguardando |  
+|  Gerenciamento do Projeto |   GitHub  |https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/322/views/1?layout=boardaguardando |  
 |  Projeto de Interface e  Wireframes  | Figma  |  https://www.canva.com/design/DAFdIJJgvPI/JDl18NWAIuokLG-SKyn5fA/edit?utm_content=DAFdIJJgvPI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton   |
 |  Reuniões  |  Microsoft Teams  | https://teams.microsoft.com/_#/school/conversations/EstocaAi?threadId=19:7430aa5637384b73ac287b0f4db90d90@thread.tacv2&ctx=channel|
 ## Controle de Versão
@@ -65,15 +65,10 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Está sendo utilizado a Ferramenta "Projects" do GitHub para organização e distribuição de tarefas da seguinte forma:
+
+![Capturssssssar](https://user-images.githubusercontent.com/100283917/228700294-1e30711a-c671-418e-b37f-9daa0e222ca5.PNG)
+
 
 ### Ferramentas
 
