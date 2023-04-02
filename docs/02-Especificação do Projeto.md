@@ -97,6 +97,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-007| A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade     | ALTA |
 |RF-008| Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)      | ALTA |
 |RF-009| A aplicação deverá listar todos os itens cadastrados   | ALTA |
+|RF-001| O software deverá comparar 3 rotas de entrega e informar a mais proxima  | ALTA | 
 
 ### Requisitos não Funcionais
 
