@@ -49,37 +49,31 @@ Satisfação geral do teste
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Preencher os campos de Cnpj e senha;<br>3. Clicar em Login|
 |  	|  	|
 | **Caso de Teste** 	| **CT-03 – Cadastrar produto** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue cadastrar itens no estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em cadastrar produto;<br>4.Inserir as informações solicitadas e clicar em "Cadastrar"|
 |  	|  	|
 | **Caso de Teste** 	| **CT-04 – Visualizar itens próximos a vencer** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar os itens proximos a vencer	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "Próximos a vencer"|
 |  	|  	|
 | **Caso de Teste** 	| **CT-05 – Ver informações sobre o produto cadastrado** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar as informações sobre o produto selecionado	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4.clicar sobre o item desejado|
 |  	|  	|
 | **Caso de Teste** 	| **CT-06 – Pesquisar produto por nome, validade ou quantidade** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue pesquisar um produto por nome, validade ou quantidade	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4.pesquisar o que deseja pelo campo de pesquisa ou data |
 |  	|  	|
 | **Caso de Teste** 	| **CT-07 – Remover item do estoque** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar as informações sobre o produto selecionado	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4. Clicar em "Remover", tendo de obrigatoriamente informar o motivo da retirada|
 |  	|  	|
 | **Caso de Teste** 	| **CT-08 – Visualizar todos os produtos no estoque** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar todos os produtos em estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque" |
