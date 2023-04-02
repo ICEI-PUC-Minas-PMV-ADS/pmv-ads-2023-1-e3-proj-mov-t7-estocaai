@@ -36,7 +36,7 @@ Satisfação geral do teste
 
 # Seguem as tarefas a serem executadas pelos participantes e observadas
 
-| **Caso de Teste** 	| **CT-01 – Realizar cadastro ** 	|
+| **Caso de Teste** 	| **CT-01 – Realizar cadastro** 	|
 |:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue se cadastrar	|
