@@ -1,28 +1,21 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+Um projeto de interface é uma proposta de design visual e interativo que busca criar uma experiência agradável e eficiente para o usuário em uma plataforma digital. No contexto de um projeto de estoque de produtos, a interface deve permitir uma navegação fácil e intuitiva pelo catálogo de produtos, além de oferecer recursos de busca e filtros que facilitem a localização dos itens desejados. Também é importante que a interface apresente informações claras e organizadas sobre a disponibilidade e quantidade de produtos em estoque.
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+A Figura A abaixo apresenta o fluxo de navegação do usuário pelas telas do site proposto. 
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+![Estoca Aí](https://user-images.githubusercontent.com/104845264/229372523-76522ea3-6cfc-4a4a-9e39-1f105545711d.png)
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+Um wireframe é um esboço visual que representa a estrutura e organização de uma interface digital, geralmente utilizado na fase inicial de um projeto de design. Abaixo serão apresentadas imagens que ilustram os wireframes do projeto.
+
 
 ## Página de preload
 A página de preload é a primeira tela que possui. Ela é a tela de carregamento da plataforma.
