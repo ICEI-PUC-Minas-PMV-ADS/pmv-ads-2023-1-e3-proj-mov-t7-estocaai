@@ -85,7 +85,6 @@ Satisfação geral do teste
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque" |
 |  	|  	|
 | **Caso de Teste** 	| **CT-09 – Pegar dois endereços e mostrar a rota e distância no google maps** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se a funcionalidade de exibição de rotas esta funcional	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login, caso não tenha cadastro deve criar uma conta;<br>3. Inserir um endereço no qual deseja ver a melhor rota|
