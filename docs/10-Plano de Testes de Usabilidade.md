@@ -69,7 +69,7 @@ Satisfação geral do teste
 |  	|  	|
 | **Caso de Teste** 	| **CT-07 – Remover item do estoque** 	|
 | **Perfil** 	| Usuário (todos)	|
-| **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar as informações sobre o produto selecionado	|
+| **Objetivo do Teste** 	| Verificar se o usuario consegue remover um determinado produto do estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4. Clicar em "Remover", tendo de obrigatoriamente informar o motivo da retirada|
 |  	|  	|
 | **Caso de Teste** 	| **CT-08 – Visualizar todos os produtos no estoque** 	|
