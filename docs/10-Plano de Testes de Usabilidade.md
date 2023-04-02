@@ -7,7 +7,7 @@
   Que obstáculos impedem que as tarefas sejam concluídas?
   
 # Perfil do usuário:
-Serão selecionados os usuários de acordo com as personas definidas na metodologia do trabalho, sendo elas, pessoas que possuem gostos por leitura e possuem algumas das características citadas nas personas e história de usuários como, pessoa aposentada, pessoa com deficiência visual, idosa, escritora e estudante.
+Serão selecionados os usuários de acordo com as personas definidas na metodologia do trabalho, sendo elas, pessoas que possuem gostos por leitura e possuem algumas das características citadas nas personas e história de usuários como, pessoa aposentada, pessoa com deficiência visual, estudante, dona de loja e graduada em administração.
 
 # Procedimento de teste
 Recepção do participante e explicações sobre o termo de consentimento livre e esclarecido (TCLE);
