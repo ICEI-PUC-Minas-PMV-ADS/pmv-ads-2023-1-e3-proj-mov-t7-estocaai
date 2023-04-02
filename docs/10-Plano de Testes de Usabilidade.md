@@ -37,13 +37,11 @@ Satisfação geral do teste
 # Seguem as tarefas a serem executadas pelos participantes e observadas
 
 | **Caso de Teste** 	| **CT-01 – Realizar cadastro** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue se cadastrar	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Clicar em "Não possui cadastro? SignUp";<br>3. Inserir todas as informações solicitadas e clicar em "Cadastrar"|
 |  	|  	|
 | **Caso de Teste** 	| **CT-02 – Realizar login** 	|
-|:---:	|:---:	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue logar	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Preencher os campos de Cnpj e senha;<br>3. Clicar em Login|
