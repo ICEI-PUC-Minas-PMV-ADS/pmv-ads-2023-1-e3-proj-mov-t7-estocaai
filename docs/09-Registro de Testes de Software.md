@@ -1,12 +1,13 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
-
-## Avaliação
-
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+| **Caso de Teste** 	| **CT-01 – Cadastrar Empresa** 	|
+|:---:	|:---:	|
+|	**CT-01 – Cadastrar Empresa**	| Não implementado ainda. |
+|	**CCT-02 – Cadastrar Item** 	| Não implementado ainda. |
+|**CT-03 – Listar Itens** 	| Não implementado ainda. |
+|	**CT-04 – Listar Itens próximos a vencer** | Não implementado ainda. |
+|**CT-05 – Exibir informações sobre item selecionado** 	| Não implementado ainda. |
+|**CT-06 – Exibir itens de acordo com a pesquisa**	| Não implementado ainda. |
+|**CCT-07 – Exibir itens de acordo com a pesquisa**| Não implementado ainda. |
+|**CT-08 – Login de usuário** | Implementado OK. |
