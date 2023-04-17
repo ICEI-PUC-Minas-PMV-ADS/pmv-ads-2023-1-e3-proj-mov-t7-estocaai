@@ -7,7 +7,7 @@ export const Container = styled.ImageBackground`
 `;
 
 export const EstocaAiLogo = styled.Image`
-width: 50%;
+width: 80%;
 height: 50%;
 `;
 
