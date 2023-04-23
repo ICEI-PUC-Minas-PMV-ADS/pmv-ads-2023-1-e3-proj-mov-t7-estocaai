@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TelaInicial from "./pages/TelaInicial/App";
 import TelaLogin from "./pages/TelaLogin/App";
 import { TelaSignUp } from "./pages/TelaSignUp";
+import MainTab from "./MainTab";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,11 +14,12 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="TelaInicial"
+        initialRouteName="MainTab"
       >
         <Stack.Screen name="TelaInicial" component={TelaInicial} />
         <Stack.Screen name="TelaLogin" component={TelaLogin} />
         <Stack.Screen name="TelaSignUp" component={TelaSignUp} />
+        <Stack.Screen name="MainTab" component={MainTab} />
       </Stack.Navigator>
     </NavigationContainer>
   );

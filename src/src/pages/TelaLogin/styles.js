@@ -17,7 +17,7 @@ export const ContentWrapper = styled.View`
   width: 100%;
   background-color: #F1F1F1;
   height: 478px;
-  border-top-right-radius: 80;
+  border-top-right-radius: 80px;
 `;
 
 export const LoginText = styled.Text`
