@@ -1,9 +1,9 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { Entypo} from "@expo/vector-icons";
+import { Entypo, FontAwesome5} from "@expo/vector-icons";
 
 import Home from "./pages/Home";
+import TelaPerfil from "./pages/TelaPerfil";
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -28,6 +28,21 @@ export default function MainTab() {
         }}
         name="Home"
         component={Home}
+      />
+      <Screen
+        options={{
+          tabBarIcon: ({focused}) => (
+            <FontAwesome5
+              name="user-alt"
+              size={30}
+              color={focused ? "#1C2120" : "gray"}
+            />
+          ),
+          tabBarLabel: "",
+          // tabBarIconStyle: { marginTop: 4 },
+        }}
+        name="TelaPerfil"
+        component={TelaPerfil}
       />
     </Navigator>
   );
