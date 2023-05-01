@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { ActivityIndicator, Dimensions } from "react-native";
+import React, { useEffect, useRef, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { PROVIDER_GOOGLE } from "react-native-maps";
+import { Entypo, AntDesign } from "@expo/vector-icons";
+import { Dimensions, View, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import {
   requestForegroundPermissionsAsync,
   getCurrentPositionAsync,
 } from "expo-location";
 
-import { Container, TextWaiting, Map } from "./styles";
+import InputAutoComplete from "../../components/InputAutoComplete";
+
+import { Container, SearchContainer, TextWaiting, Map } from "./styles";
 
 const { width, height } = Dimensions.get("window");
 
@@ -17,6 +21,13 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default function TelaMap() {
   const [location, setLocation] = useState(null);
+  const [origim, setOrigin] = useState("");
+  const [destination, setDestination] = useState("");
+  const [destination2, setDestination2] = useState("");
+
+  const mapRef = useRef(null);
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     async function requestLocationPermissions() {
@@ -32,37 +43,79 @@ export default function TelaMap() {
     requestLocationPermissions();
   }, []);
 
-  if (!location) {
-    return (
-      <Container style={{ flex: 1 }}>
-        <TextWaiting>Aguarde, obtendo localização...</TextWaiting>
-        <ActivityIndicator size="large" />
-      </Container>
-    );
-  }
+  const moveTo = async (position) => {
+    const camera = await mapRef.current?.getCamera();
+    if (camera) {
+      camera.center = position;
+      mapRef.current.animateCamera(camera, { duration: 1000 });
+    }
+  };
+
+  const onPlaceSelected = (details, flag) => {
+    const set =
+      flag === "origim"
+        ? setOrigin
+        : flag === "destination"
+        ? setDestination
+        : setDestination2;
+    const position = {
+      latitude: details?.geometry.location.lat || 0,
+      longitude: details?.geometry.location.lng || 0,
+    };
+    set(position);
+    moveTo(position);
+  };
 
   return (
     <Container>
       <StatusBar style="dark" />
 
-      {/* <Entypo
-        name="arrow-left"
-        size={35}
-        color="#fff"
-        onPress={() => navigation.navigate("Home")}
-        
-      /> */}
-
       <Map
+        ref={mapRef}
         provider={PROVIDER_GOOGLE}
-        initialRegion={{
-          latitude: location.coords.latitude,
-          longitude: location.coords.longitude,
-          latitudeDelta: LATITUDE_DELTA,
-          longitudeDelta: LONGITUDE_DELTA,
-        }}
-      />
+        loadingEnabled
+        initialRegion={
+          location && {
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude,
+            latitudeDelta: LATITUDE_DELTA,
+            longitudeDelta: LONGITUDE_DELTA,
+          }
+        }
+      >
+        {origim && <Marker coordinate={origim} />}
+        {destination && <Marker coordinate={destination} />}
+        {destination2 && <Marker coordinate={destination2} />}
+      </Map>
 
+      <SearchContainer>
+        <AntDesign
+          name="arrowleft"
+          size={35}
+          color="#1C2120"
+          onPress={() => navigation.navigate("Home")}
+        />
+        <InputAutoComplete
+          placeholder="origem"
+          label={"Origem"}
+          onPlacedSelected={(details) => onPlaceSelected(details, "origim")}
+        />
+        <InputAutoComplete
+          placeholder="escreva o primeiro destino"
+          label={"Destino 1"}
+          onPlacedSelected={(details) =>
+            onPlaceSelected(details, "destination")
+          }
+        />
+
+        <InputAutoComplete
+          placeholder="escreva o segundo destino"
+          label={"Destino 2"}
+          onPlacedSelected={(details) => {
+            onPlaceSelected(details, "destination2");
+          }}
+        />
+      </SearchContainer>
     </Container>
   );
 }
