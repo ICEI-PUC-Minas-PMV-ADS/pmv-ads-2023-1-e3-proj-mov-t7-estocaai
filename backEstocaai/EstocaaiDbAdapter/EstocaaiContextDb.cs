@@ -1,14 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EstocaaiDbAdapter
 {
-    internal class EstocaaiContextDb : DbContext
+    public class EstocaaiContextDb : DbContext
     {
         public EstocaaiContextDb(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
