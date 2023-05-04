@@ -18,13 +18,16 @@ import coverImg from '../../assets/cover.png';
 import logo from '../../assets/logo.png';
 
 import SignInput from "../../components/SignInput";
+import { useNavigation } from "@react-navigation/native";
 
 
 export default function TelaLogin() {
-
+  
   const [userField, setUserField] = useState('');
   const [passwordField, setPasswordField] = useState('');
-
+  
+  const navigation = useNavigation();
+  
   return (
     <Container source={coverImg}>
       <StatusBar  
@@ -56,7 +59,7 @@ export default function TelaLogin() {
           <ButtonText>LOGIN</ButtonText>
         </Button>
 
-        <SignMessageButton onPress={() => {}}>
+        <SignMessageButton onPress={() => navigation.reset({routes: [{name: "TelaSignUp"}]})}>
           <SignMessageButtonText>Ainda não possui uma conta?</SignMessageButtonText>
           <SignMessageButtonBold>Cadastre-se!</SignMessageButtonBold>
         </SignMessageButton>

@@ -5,33 +5,21 @@ export const Container = styled.ImageBackground`
   align-items: center;
 `;
 
-export const EstocaAiLogo = styled.Image`
-  width: 80%;
-  margin-top: 120px;
-`;
-
 export const ContentWrapper = styled.View`
   position: absolute;
   bottom: 0;
   padding: 40px;
   width: 100%;
   background-color: #F1F1F1;
-  height: 478px;
-  border-top-right-radius: 80px;
+  height: 650px;
+  border-top-left-radius: 80px;
 `;
 
 export const LoginText = styled.Text`
-  font-size: 37px;
+  font-size: 26px;
   font-weight: bold;
   color: #212625;
   text-align: center;
-`;
-
-export const SmallText = styled.Text`
-  font-size: 12px;
-  text-align: center;
-  opacity: 0.5;
-  margin-bottom: 4px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -50,7 +38,8 @@ export const ButtonText = styled.Text`
 export const SignMessageButton = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 `;
 
 export const SignMessageButtonText = styled.Text`
