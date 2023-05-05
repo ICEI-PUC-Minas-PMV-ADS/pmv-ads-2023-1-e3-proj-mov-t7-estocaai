@@ -27,7 +27,10 @@ export default function TelaLogin() {
   const [passwordField, setPasswordField] = useState('');
   
   const navigation = useNavigation();
-  
+  const chamarTab = () =>
+  {
+    navigation.navigate('MainTab');
+  }
   return (
     <Container source={coverImg}>
       <StatusBar  
@@ -55,7 +58,7 @@ export default function TelaLogin() {
           onChangeText={t=>setPasswordField(t)}
         />
 
-        <Button onPress={() => {}}>
+        <Button onPress={() => chamarTab()}>
           <ButtonText>LOGIN</ButtonText>
         </Button>
 
