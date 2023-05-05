@@ -9,7 +9,7 @@ namespace backEnd.Models
 
         public string Rua { get; set; }
 
-        public int Cidade { get; set; }
+        public string Cidade { get; set; }
 
         public string Estado { get; set; }
     }

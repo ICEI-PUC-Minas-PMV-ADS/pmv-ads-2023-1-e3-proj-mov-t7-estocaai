@@ -6,6 +6,8 @@ import photo from "../../assets/photo.png";
 import SignInput from "../../components/SignInput";
 import BasicButton from "../../components/BasicButton";
 
+import { obterEnderecos } from "../../services/Endereco";
+
 import {
   Container,
   Text,
@@ -27,6 +29,11 @@ export default function TelaPerfil() {
     console.log(form);
   };
 
+  const atualizar = () => {
+    console.log("teste")
+    // obterEnderecos(); 
+  }
+  
   return (
     <Container source={coverImg}>
       <Text>Perfil</Text>
@@ -65,7 +72,7 @@ export default function TelaPerfil() {
             isSetting
           />
 
-          <BasicButton onPress={() => {}} text="Atualizar" teste />
+          <BasicButton onPress={() => atualizar()} text="Atualizar" teste />
 
           {/* <View style={{marginBottom: 40}}></View> */}
         </Scroll>
