@@ -1,7 +1,7 @@
-﻿using Domain.Models;
+﻿using backEnd.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EstocaaiDbAdapter
+namespace backEnd.Data
 {
     public class EstocaaiContextDb : DbContext
     {

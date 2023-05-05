@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Domain.Models
+namespace backEnd.Models
 {
     public class Usuario
     {

@@ -3,19 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Core", "0 Core", "{E60417D3-D90D-4B58-8AC3-5A8A92EDA6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Infra", "1 Infra", "{18738AD8-CBAF-48E2-80F5-12C700E1A64B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Presentation", "2 Presentation", "{19AB169D-BF51-4717-A837-2B0AF7FFFECC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C45146A8-6ED9-4078-95B9-B5A2F631E05C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{596A9098-26C9-469D-9F40-615908CF6687}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstocaaiDbAdapter", "EstocaaiDbAdapter\EstocaaiDbAdapter.csproj", "{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiEstocaai", "ApiEstocaai\ApiEstocaai.csproj", "{8C04064A-CC84-47FB-B64F-93D751AF51DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,31 +13,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C45146A8-6ED9-4078-95B9-B5A2F631E05C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C45146A8-6ED9-4078-95B9-B5A2F631E05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C45146A8-6ED9-4078-95B9-B5A2F631E05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C45146A8-6ED9-4078-95B9-B5A2F631E05C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{596A9098-26C9-469D-9F40-615908CF6687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{596A9098-26C9-469D-9F40-615908CF6687}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{596A9098-26C9-469D-9F40-615908CF6687}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{596A9098-26C9-469D-9F40-615908CF6687}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C04064A-CC84-47FB-B64F-93D751AF51DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C04064A-CC84-47FB-B64F-93D751AF51DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C04064A-CC84-47FB-B64F-93D751AF51DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C04064A-CC84-47FB-B64F-93D751AF51DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C45146A8-6ED9-4078-95B9-B5A2F631E05C} = {E60417D3-D90D-4B58-8AC3-5A8A92EDA6F1}
-		{596A9098-26C9-469D-9F40-615908CF6687} = {E60417D3-D90D-4B58-8AC3-5A8A92EDA6F1}
-		{0DB82E25-3FBF-492B-AE2C-F1B9FE8E9F7D} = {18738AD8-CBAF-48E2-80F5-12C700E1A64B}
-		{A3D7D1A0-A593-478A-9593-8FB3F9EBBA21} = {19AB169D-BF51-4717-A837-2B0AF7FFFECC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7071B0D-747C-43A7-9F2E-DAF4B318147D}

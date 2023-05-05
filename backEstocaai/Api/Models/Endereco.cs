@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Domain.Models
+namespace Api.Models
 {
     public class Endereco
     {
+
         public Guid Id { get; set; }
 
         public string Rua { get; set; }
