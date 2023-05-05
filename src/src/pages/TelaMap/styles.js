@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import MapView from "react-native-maps";
 import Constants from "expo-constants";
+
 export const Container = styled.ImageBackground`
   flex: 1;
   background-color: #fff;
@@ -35,3 +36,24 @@ export const SearchContainer = styled.View`
 // export const GooglePlacesAutocompleteElement = styled(GooglePlacesAutocomplete)`
 
 // `;
+
+export const ShowRoutesButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  background-color: #F1F1F9;
+  width: 200px;
+  align-self: flex-end;
+  justify-content: center;
+`;
+export const ShowRoutesButtonText = styled.Text`
+  font-weight: bold;
+  font-size: 14px;
+margin-left: 10px;
+`;
+
+export const ResultsView = styled.View`
+`;
+
+export const ResultsText = styled.Text`
+  font-size: 15px;
+`;
