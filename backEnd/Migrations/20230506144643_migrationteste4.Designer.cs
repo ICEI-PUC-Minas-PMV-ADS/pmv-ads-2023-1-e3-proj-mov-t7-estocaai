@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backEnd.Data;
 
-namespace Api.Migrations
+namespace backEnd.Migrations
 {
     [DbContext(typeof(EstocaaiContextDb))]
-    partial class EstocaaiContextDbModelSnapshot : ModelSnapshot
+    [Migration("20230506144643_migrationteste4")]
+    partial class migrationteste4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

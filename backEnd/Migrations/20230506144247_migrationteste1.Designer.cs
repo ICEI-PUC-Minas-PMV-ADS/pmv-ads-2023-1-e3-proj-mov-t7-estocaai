@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backEnd.Data;
 
-namespace Api.Migrations
+namespace backEnd.Migrations
 {
     [DbContext(typeof(EstocaaiContextDb))]
-    [Migration("20230505220939_migration3")]
-    partial class migration3
+    [Migration("20230506144247_migrationteste1")]
+    partial class migrationteste1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,6 +32,9 @@ namespace Api.Migrations
 
                     b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Rua")
                         .HasColumnType("nvarchar(max)");

@@ -12,11 +12,15 @@ export default function TelaInicial({ navigation }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('TelaLogin');
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [navigation]);
 
+  const chamarTab = () =>
+  {
+    navigation.navigate('MainTab');
+  }
   return (
     <Container source={coverImg}>
       <StatusBar  
@@ -25,7 +29,9 @@ export default function TelaInicial({ navigation }) {
       />
       
       <EstocaAiLogo source={logo} resizeMode="contain"/>
-
+      {/* <Button onPress={() => chamarTab()}>
+          <ButtonText>Entrar</ButtonText>
+        </Button> */}
       <LoadingIcon  size="large" color="#ffffff"/>
     </Container>
   );

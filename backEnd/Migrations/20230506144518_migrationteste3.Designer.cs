@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backEnd.Data;
 
-namespace Api.Migrations
+namespace backEnd.Migrations
 {
     [DbContext(typeof(EstocaaiContextDb))]
-    partial class EstocaaiContextDbModelSnapshot : ModelSnapshot
+    [Migration("20230506144518_migrationteste3")]
+    partial class migrationteste3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,6 +32,9 @@ namespace Api.Migrations
 
                     b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Rua")
                         .HasColumnType("nvarchar(max)");

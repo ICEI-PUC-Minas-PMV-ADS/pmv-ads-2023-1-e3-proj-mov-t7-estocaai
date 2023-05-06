@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Api.Migrations
+namespace backEnd.Migrations
 {
-    public partial class migration2 : Migration
+    public partial class migrationteste : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
