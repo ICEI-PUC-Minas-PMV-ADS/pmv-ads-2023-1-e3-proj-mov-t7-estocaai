@@ -44,6 +44,7 @@ export default function TelaInicial() {
   {
     setValorEndereco(valorCep)
   }
+
   return (
     <Container source={coverImg}>
       <StatusBar style="light" />

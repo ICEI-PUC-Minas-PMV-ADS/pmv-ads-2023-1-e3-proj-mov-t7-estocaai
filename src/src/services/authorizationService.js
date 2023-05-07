@@ -9,8 +9,22 @@ const checkUserExists = (cnpj) => {
 }
 
 export const getUser = () => {
-    console.log(storage)
     return storage.currentUser
+}
+
+export const updateUser = (updateUser) => {
+    const user = storage.currentUser
+    user.cnpj = updateUser.cnpj
+    user.name = updateUser.name
+    user.email = updateUser.email
+    storage = {
+        ...storage,
+        currentUser : {
+            ...storage.currentUser,
+            user
+        }
+    }
+    console.log(storage)
 }
 
 export const createUser = (createUser) => {
