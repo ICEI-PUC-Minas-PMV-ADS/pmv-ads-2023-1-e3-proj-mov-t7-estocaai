@@ -29,7 +29,7 @@
 |	Requisito Associado 	| RF-002 - A aplicação deve calcular a rota informada e exibir a distância e duração |
 | Objetivo do Teste 	| Verificar se a empresa consegue calcular a rota |
 | Passos 	| - Acessar a aplicação <br> - Informar origem e destino |
-|Critério de Êxito | - O cadastro foi realizado com sucesso <br> - Redirecionar para tela home  |
+|Critério de Êxito | - Exibir a distância e duração do percurso |
 
 
 | **Caso de Teste** 	| **CCT-05 – Cadastrar Item** 	|
