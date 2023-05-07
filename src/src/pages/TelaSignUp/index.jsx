@@ -17,6 +17,8 @@ import {
   SignMessageButtonBold,
 } from "./styles";
 
+import { createUser } from "../../services/authorizationService"
+
 export function TelaSignUp() {
   const [form, setForm] = useState({
     name: "",
@@ -29,8 +31,15 @@ export function TelaSignUp() {
 
   const handleInputChange = (fieldName, value) => {
     setForm({ ...form, [fieldName]: value });
-    console.log(form);
+    // console.log(form);
   };
+
+  const doSignUp = () =>
+  {
+    console.log('sending cadastro')
+    createUser(form)
+    navigation.navigate('TelaLogin');
+  }
 
   return (
     <Container source={coverImg}>
@@ -83,7 +92,7 @@ export function TelaSignUp() {
           onChangeText={(t) => handleInputChange("password", t)}
         />
 
-        <Button onPress={() => {}}>
+        <Button onPress={() => doSignUp()}>
           <ButtonText>Cadastro</ButtonText>
         </Button>
       </ContentWrapper>

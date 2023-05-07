@@ -16,12 +16,14 @@ import {
   PhotoDefault,
   Scroll,
 } from "./styles";
+import { getUser } from "../../services/authorizationService"
 
 export default function TelaPerfil() {
+  const currentUser = getUser()
   const [form, setForm] = useState({
-    name: "",
-    cnpj: "",
-    email: "",
+    name: currentUser.name,
+    cnpj: currentUser.cnpj,
+    email: currentUser.email,
   });
 
   const handleInputChange = (fieldName, value) => {

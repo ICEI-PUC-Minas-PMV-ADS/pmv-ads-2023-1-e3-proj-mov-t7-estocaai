@@ -20,11 +20,15 @@ import {
   InputAddressText,
   ButtonContainer
 } from "./styles";
+import { getUser } from "../../services/authorizationService"
+
 
 export default function TelaInicial() {
   const [address, setAddress] = useState("");
   const [valorEndereco, setValorEndereco] = useState("");
   const [valorCep, setValorCep] = useState("");
+
+  const currentUser = getUser()
 
   const navigation = useNavigation();
 
@@ -48,7 +52,7 @@ export default function TelaInicial() {
 
         <TextContainer>
           <WelcomeText>Bem-vindo</WelcomeText>
-          <UserName>fulano</UserName>
+          <UserName>{currentUser.name}</UserName>
         </TextContainer>
       </Header>
 
