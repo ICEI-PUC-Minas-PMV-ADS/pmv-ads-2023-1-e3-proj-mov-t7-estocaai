@@ -60,3 +60,10 @@
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Clicar no item <br> - Clicar em retirar item <br> - Inserir o motivo e a quantidade   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Abrir seleção de item <br>- Retirar a quantidade selecionada    |
+
+| **Caso de Teste** 	| **CT-09 – Exibir informações do perfil** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-002 - A aplicação deve exibir as informações do usuario que foram informadas durante o cadastro |
+| Objetivo do Teste 	| Verificar se as informações do usuario estão sendo informadas |
+| Passos 	| - Acessar a aplicação <br> - Clicar no icone de perfil |
+|Critério de Êxito | - Exibir as informações do usuario |
