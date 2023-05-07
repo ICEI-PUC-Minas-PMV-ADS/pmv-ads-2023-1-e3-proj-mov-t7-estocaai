@@ -53,7 +53,7 @@
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Clicar no item <br> - Clicar em retirar item <br> - Inserir o motivo e a quantidade   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Abrir seleção de item <br>- Retirar a quantidade selecionada    |
 
-| **Caso de Teste** 	| **CT-08 – Login de usuário** 	|
+| **Caso de Teste** 	| **CT-08 – Login** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| N/A |
 | Objetivo do Teste 	| Verificar se um representante da empresa consegue logar na aplicação usando usuário e senha cadastrado   |
