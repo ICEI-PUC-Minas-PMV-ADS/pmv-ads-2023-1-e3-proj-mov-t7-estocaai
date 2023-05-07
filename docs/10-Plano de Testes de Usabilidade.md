@@ -47,40 +47,47 @@ Satisfação geral do teste
 | **Objetivo do Teste** 	| Verificar se o usuario consegue logar	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Preencher os campos de Cnpj e senha;<br>3. Clicar em Login|
 |  	|  	|
-| **Caso de Teste** 	| **CT-03 – Cadastrar produto** 	|
+|  	|  	|
+| **Caso de Teste** 	| **CT-03 – Exibir informações do perfil** 	|
+| **Perfil** 	| Usuário (todos)	|
+| **Objetivo do Teste** 	| Verificar se esta sendo exibido as informações do usuario	|
+| **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login, caso não tenha cadastro deve criar uma conta;<br>3. Clicar no icone de perfil |
+|  	|  	|
+|  	|  	|
+| **Caso de Teste** 	| **CT-04 – Pegar dois endereços e mostrar a rota e distância no google maps** 	|
+| **Perfil** 	| Usuário (todos)	|
+| **Objetivo do Teste** 	| Verificar se a funcionalidade de exibição de rotas esta funcional	|
+| **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login, caso não tenha cadastro deve criar uma conta;<br>3. Inserir um endereço no qual deseja ver a melhor rota|
+|  	|  	|
+| **Caso de Teste** 	| **CT-05 – Cadastrar produto** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue cadastrar itens no estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em cadastrar produto;<br>4.Inserir as informações solicitadas e clicar em "Cadastrar"|
 |  	|  	|
-| **Caso de Teste** 	| **CT-04 – Visualizar itens próximos a vencer** 	|
+| **Caso de Teste** 	| **CT-06 – Visualizar itens próximos a vencer** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar os itens proximos a vencer	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "Próximos a vencer"|
 |  	|  	|
-| **Caso de Teste** 	| **CT-05 – Ver informações sobre o produto cadastrado** 	|
+| **Caso de Teste** 	| **CT-07 – Ver informações sobre o produto cadastrado** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar as informações sobre o produto selecionado	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4.clicar sobre o item desejado|
 |  	|  	|
-| **Caso de Teste** 	| **CT-06 – Pesquisar produto por nome, validade ou quantidade** 	|
+| **Caso de Teste** 	| **CT-08 – Pesquisar produto por nome, validade ou quantidade** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue pesquisar um produto por nome, validade ou quantidade	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4.pesquisar o que deseja pelo campo de pesquisa ou data |
 |  	|  	|
-| **Caso de Teste** 	| **CT-07 – Remover item do estoque** 	|
+| **Caso de Teste** 	| **CT-09 – Remover item do estoque** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue remover um determinado produto do estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque";<br>4. Clicar em "Remover", tendo de obrigatoriamente informar o motivo da retirada|
 |  	|  	|
-| **Caso de Teste** 	| **CT-08 – Visualizar todos os produtos no estoque** 	|
+| **Caso de Teste** 	| **CT-10 – Visualizar todos os produtos no estoque** 	|
 | **Perfil** 	| Usuário (todos)	|
 | **Objetivo do Teste** 	| Verificar se o usuario consegue visualizar todos os produtos em estoque	|
 | **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login;<br>3. Clicar em "estoque" |
-|  	|  	|
-| **Caso de Teste** 	| **CT-09 – Pegar dois endereços e mostrar a rota e distância no google maps** 	|
-| **Perfil** 	| Usuário (todos)	|
-| **Objetivo do Teste** 	| Verificar se a funcionalidade de exibição de rotas esta funcional	|
-| **Ações necessárias** 	| 1. Acessar o app;<br>2.Realizar login, caso não tenha cadastro deve criar uma conta;<br>3. Inserir um endereço no qual deseja ver a melhor rota|
 |  	|  	|
 
 
