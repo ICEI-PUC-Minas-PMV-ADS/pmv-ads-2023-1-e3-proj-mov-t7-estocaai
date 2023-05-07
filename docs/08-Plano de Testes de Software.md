@@ -10,7 +10,7 @@
 
 | **Caso de Teste** 	| **CT-02 – Login** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| N/A |
+|	Requisito Associado 	| RF-003 - A aplicação deve gerenciar empresas. Para uma empresa logar no sistema deverá fornecer Cnpj e senha |
 | Objetivo do Teste 	| Verificar se um representante da empresa consegue logar na aplicação usando usuário e senha cadastrado   |
 | Passos 	| - Acessar a aplicação <br> - Na tela de login, Inserir usuário e senha validos <br> - Clicar em entrar   |
 |Critério de Êxito | - Abrir a aplicação com a tela de login  <br> - Redirecionar o usuário conforme a empresa     |
@@ -18,7 +18,7 @@
 
 | **Caso de Teste** 	| **CT-03 – Exibir informações do perfil** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - A aplicação deve exibir as informações do usuario que foram informadas durante o cadastro |
+|	Requisito Associado 	| RF-010 - O software deverá exibir as informações do usuario |
 | Objetivo do Teste 	| Verificar se as informações do usuario estão sendo informadas |
 | Passos 	| - Acessar a aplicação <br> - Clicar no icone de perfil |
 |Critério de Êxito | - Exibir as informações do usuario |
@@ -26,13 +26,13 @@
 
 | **Caso de Teste** 	| **CT-04 – Calcular rota** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - A aplicação deve calcular a rota informada e exibir a distância e duração |
+|	Requisito Associado 	| RF-011 - O software deverá calcular a rota e exibir a distância e duração |
 | Objetivo do Teste 	| Verificar se a empresa consegue calcular a rota |
 | Passos 	| - Acessar a aplicação <br> - Informar origem e destino |
 |Critério de Êxito | - Exibir a distância e duração do percurso |
 
 
-| **Caso de Teste** 	| **CCT-05 – Cadastrar Item** 	|
+| **Caso de Teste** 	| **CT-05 – Cadastrar Item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004- A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não |
 | Objetivo do Teste 	| Verificar se a empresa consegue cadastrar um item na aplicação. |
@@ -70,7 +70,7 @@
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Digitar "nome" no campo de pesquisa   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Mostrar item de acordo com o pesquisado   |
 
-| **Caso de Teste** 	| **CCT-010 – Exibir itens de acordo com a pesquisa** 	|
+| **Caso de Teste** 	| **CCT-010 – Remover item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-008- Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)  |
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
