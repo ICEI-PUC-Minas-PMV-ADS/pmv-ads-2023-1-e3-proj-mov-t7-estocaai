@@ -30,7 +30,8 @@ export default function TelaPerfil() {
   };
 
   const atualizar = () => {
-     obterEnderecos(); 
+    console.log("teste")
+    // obterEnderecos(); 
   }
   
   return (
