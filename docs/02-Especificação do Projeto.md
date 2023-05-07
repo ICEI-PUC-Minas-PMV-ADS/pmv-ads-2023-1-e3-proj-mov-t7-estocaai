@@ -99,6 +99,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| A aplicação deverá listar todos os itens cadastrados   | ALTA |
 |RF-010| O software deverá comparar 3 rotas de entrega e informar a mais proxima  | ALTA | 
 |RF-011| O software deverá exibir as informações do usuario  | ALTA | 
+|RF-012| O software deverá calcular a rota rota e exibir a distância e duração  | ALTA | 
 
 ### Requisitos não Funcionais
 
