@@ -24,14 +24,22 @@
 |Critério de Êxito | - Exibir as informações do usuario |
 
 
-| **Caso de Teste** 	| **CCT-04 – Cadastrar Item** 	|
+| **Caso de Teste** 	| **CT-04 – Calcular rota** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-002 - A aplicação deve calcular a rota informada e exibir a distância e duração |
+| Objetivo do Teste 	| Verificar se a empresa consegue calcular a rota |
+| Passos 	| - Acessar a aplicação <br> - Informar origem e destino |
+|Critério de Êxito | - O cadastro foi realizado com sucesso <br> - Redirecionar para tela home  |
+
+
+| **Caso de Teste** 	| **CCT-05 – Cadastrar Item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004- A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não |
 | Objetivo do Teste 	| Verificar se a empresa consegue cadastrar um item na aplicação. |
 | Passos 	| - Acessar a aplicação  <br> - Informar o nome do item, a quantidade, e se possuir validade informa-la  <br>- Clicar em "Cadastrar"  | - O cadastro foi realizado com sucesso   <br> - Continuar na página   |
 
 
-| **Caso de Teste** 	| **CT-05 – Listar Itens** 	|
+| **Caso de Teste** 	| **CT-06 – Listar Itens** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-009- A aplicação deverá listar todos os itens cadastrados  |
 | Objetivo do Teste 	| Verificar se a empresa listar itens cadastrados na aplicação.  |
@@ -39,7 +47,7 @@
 |Critério de Êxito | - Listar todos os itens cadastrados    |
 
 
-| **Caso de Teste** 	| **CT-06 – Listar Itens próximos a vencer** 	|
+| **Caso de Teste** 	| **CT-07 – Listar Itens próximos a vencer** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-005- A aplicação deverá listar os itens próximos a vencer  |
 | Objetivo do Teste 	| Verificar se a empresa listar itens próximos a vencer cadastrados na aplicação.  |
@@ -47,7 +55,7 @@
 |Critério de Êxito | - Listar todos os itens cadastrados próximos a vencer   |
 
 
-| **Caso de Teste** 	| **CT-07 – Exibir informações sobre item selecionado** 	|
+| **Caso de Teste** 	| **CT-08 – Exibir informações sobre item selecionado** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-006- Deverá ser exibido informações sobre o item cadastrado   |
 | Objetivo do Teste 	| Verificar se a empresa consegue obter informações mais detalhadas de item cadastrado.  |
@@ -55,14 +63,14 @@
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Mostrar detalhes do item selecionado   |
 
 
-| **Caso de Teste** 	| **CT-08 – Exibir itens de acordo com a pesquisa** 	|
+| **Caso de Teste** 	| **CT-09 – Exibir itens de acordo com a pesquisa** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-007- A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade   |
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Digitar "nome" no campo de pesquisa   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Mostrar item de acordo com o pesquisado   |
 
-| **Caso de Teste** 	| **CCT-09 – Exibir itens de acordo com a pesquisa** 	|
+| **Caso de Teste** 	| **CCT-010 – Exibir itens de acordo com a pesquisa** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-008- Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)  |
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
