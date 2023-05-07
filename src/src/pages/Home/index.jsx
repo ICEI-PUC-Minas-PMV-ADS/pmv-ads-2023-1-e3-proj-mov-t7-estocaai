@@ -7,6 +7,7 @@ import coverImg from "../../assets/cover.png";
 
 import SignInput from "../../components/SignInput";
 import BasicButton from "../../components/BasicButton";
+import { cadastrarEnderecoBancoDeDados } from "../../services/Endereco";
 
 import {
   Container,
@@ -22,9 +23,23 @@ import {
 
 export default function TelaInicial() {
   const [address, setAddress] = useState("");
+  const [valorEndereco, setValorEndereco] = useState("");
+  const [valorCep, setValorCep] = useState("");
 
   const navigation = useNavigation();
 
+  const cadastrar = () => {
+    cadastrarEnderecoBancoDeDados(valorCep,valorEndereco)
+  
+  }
+  const cadastrarValorCep = (valorCep) =>
+  {
+    setValorCep(valorCep)
+  }
+  const cadastrarValorEndereco= (valorCep) =>
+  {
+    setValorEndereco(valorCep)
+  }
   return (
     <Container source={coverImg}>
       <StatusBar style="light" />
@@ -42,14 +57,19 @@ export default function TelaInicial() {
 
         <SignInput
           icon="map"
-          placeholcer="digite um endereço"
-          label="Endereço"
+          placeholcer="Digite o CEP"
+          label="Cep"
+          onChangeText={(valor) => cadastrarValorCep(valor)}
+        />
+        <SignInput
+          icon="map"
+          placeholcer="Digite o número."
+          label="Número"
+          onChangeText={(valor) => cadastrarValorEndereco(valor)}
         />
 
         <ButtonContainer>
-          <BasicButton onPress={() => {}} text="Cadastrar" />
-
-          <BasicButton onPress={() => {}} text="Calcular" />
+          <BasicButton onPress={() => cadastrar()} text="Cadastrar" />
         </ButtonContainer>
       </ContentWrapper>
     </Container>

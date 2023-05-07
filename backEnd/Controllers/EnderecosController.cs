@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backEnd.Services;
 
 namespace backEnd.Controllers
 {
@@ -44,10 +45,24 @@ namespace backEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddEndereco(Endereco endereco)
+        public async Task<IActionResult> AddEndereco(string cep, string numero)
         {
+            var correiosApi = new CorreiosApi();
+
+            var rastrearEndereco = await correiosApi.RastrearObjeto(cep);
+
+            var endereco = new Endereco
+            {
+                Id = Guid.NewGuid(),
+                Cidade = rastrearEndereco.localidade,
+                Rua = rastrearEndereco.logradouro + numero,
+                Estado = rastrearEndereco.uf
+            };
+
             _context.Enderecos.Add(endereco);
+
             await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetEndereco), new { id = endereco.Id }, endereco);
         }
 

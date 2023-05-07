@@ -16,17 +16,17 @@ namespace backEnd
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run();
 
-            var host = CreateHostBuilder(args).Build();
+            //var host = CreateHostBuilder(args).Build();
 
-            using (var scope = host.Services.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<EstocaaiContextDb>();
-                db.Database.Migrate(); // apply the migrations
-            }
+            //using (var scope = host.Services.CreateScope())
+            //{
+            //    var db = scope.ServiceProvider.GetRequiredService<EstocaaiContextDb>();
+            //    db.Database.Migrate(); // apply the migrations
+            //}
 
-            host.Run(); // start handling requests
+            //host.Run(); // start handling requests
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

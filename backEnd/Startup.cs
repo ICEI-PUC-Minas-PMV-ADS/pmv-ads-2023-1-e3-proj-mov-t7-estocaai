@@ -40,6 +40,7 @@ namespace backEnd
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "backEnd v1"));
             }
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

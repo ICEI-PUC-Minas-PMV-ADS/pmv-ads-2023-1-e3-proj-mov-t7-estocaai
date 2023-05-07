@@ -20,7 +20,7 @@ export default function InputAutoComplete({
           }}
           fetchDetails
           query={{
-            key: "AIzaSyCDBuSjb55C4-2oRvEtx77zEiydMKw9V3g",
+            key: "AIzaSyAopPeYEVeSdCuZf2wvFn1s10lOuLMNJ8M",
             language: "pt-BR",
           }}
         />
