@@ -16,14 +16,22 @@
 |Critério de Êxito | - Abrir a aplicação com a tela de login  <br> - Redirecionar o usuário conforme a empresa     |
 
 
-| **Caso de Teste** 	| **CCT-03 – Cadastrar Item** 	|
+| **Caso de Teste** 	| **CT-03 – Exibir informações do perfil** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-002 - A aplicação deve exibir as informações do usuario que foram informadas durante o cadastro |
+| Objetivo do Teste 	| Verificar se as informações do usuario estão sendo informadas |
+| Passos 	| - Acessar a aplicação <br> - Clicar no icone de perfil |
+|Critério de Êxito | - Exibir as informações do usuario |
+
+
+| **Caso de Teste** 	| **CCT-04 – Cadastrar Item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004- A aplicação deverá conter uma funcionalidade para cadastrar itens, no qual deverá ser informado: Nome, Quantidade e se possui validade ou não |
 | Objetivo do Teste 	| Verificar se a empresa consegue cadastrar um item na aplicação. |
 | Passos 	| - Acessar a aplicação  <br> - Informar o nome do item, a quantidade, e se possuir validade informa-la  <br>- Clicar em "Cadastrar"  | - O cadastro foi realizado com sucesso   <br> - Continuar na página   |
 
 
-| **Caso de Teste** 	| **CT-04 – Listar Itens** 	|
+| **Caso de Teste** 	| **CT-05 – Listar Itens** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-009- A aplicação deverá listar todos os itens cadastrados  |
 | Objetivo do Teste 	| Verificar se a empresa listar itens cadastrados na aplicação.  |
@@ -31,7 +39,7 @@
 |Critério de Êxito | - Listar todos os itens cadastrados    |
 
 
-| **Caso de Teste** 	| **CT-05 – Listar Itens próximos a vencer** 	|
+| **Caso de Teste** 	| **CT-06 – Listar Itens próximos a vencer** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-005- A aplicação deverá listar os itens próximos a vencer  |
 | Objetivo do Teste 	| Verificar se a empresa listar itens próximos a vencer cadastrados na aplicação.  |
@@ -39,7 +47,7 @@
 |Critério de Êxito | - Listar todos os itens cadastrados próximos a vencer   |
 
 
-| **Caso de Teste** 	| **CT-06 – Exibir informações sobre item selecionado** 	|
+| **Caso de Teste** 	| **CT-07 – Exibir informações sobre item selecionado** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-006- Deverá ser exibido informações sobre o item cadastrado   |
 | Objetivo do Teste 	| Verificar se a empresa consegue obter informações mais detalhadas de item cadastrado.  |
@@ -47,23 +55,17 @@
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Mostrar detalhes do item selecionado   |
 
 
-| **Caso de Teste** 	| **CT-07 – Exibir itens de acordo com a pesquisa** 	|
+| **Caso de Teste** 	| **CT-08 – Exibir itens de acordo com a pesquisa** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-007- A aplicação deverá permitir que o usuário pesquise um item por Nome, validade ou quantidade   |
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Digitar "nome" no campo de pesquisa   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Mostrar item de acordo com o pesquisado   |
 
-| **Caso de Teste** 	| **CCT-08 – Exibir itens de acordo com a pesquisa** 	|
+| **Caso de Teste** 	| **CCT-09 – Exibir itens de acordo com a pesquisa** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-008- Deve conter uma opção para retirada do item em estoque, tendo obrigatoriamente de informar o motivo (Validade, Requisitado, Outros)  |
 | Objetivo do Teste 	| Verificar se a empresa consegue listar itens de acordo informações como nome e validade  |
 | Passos 	| - Acessar a aplicação <br> - Clicar na listagem de itens <br> - Clicar no item <br> - Clicar em retirar item <br> - Inserir o motivo e a quantidade   |
 |Critério de Êxito | - Listar todos os itens cadastrados <br> - Abrir seleção de item <br>- Retirar a quantidade selecionada    |
 
-| **Caso de Teste** 	| **CT-09 – Exibir informações do perfil** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF-002 - A aplicação deve exibir as informações do usuario que foram informadas durante o cadastro |
-| Objetivo do Teste 	| Verificar se as informações do usuario estão sendo informadas |
-| Passos 	| - Acessar a aplicação <br> - Clicar no icone de perfil |
-|Critério de Êxito | - Exibir as informações do usuario |
