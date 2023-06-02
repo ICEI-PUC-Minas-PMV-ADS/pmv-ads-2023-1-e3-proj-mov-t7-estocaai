@@ -81,7 +81,7 @@ export default function TelaPerfil() {
             isSetting
           />
           {/* <Text>{message}</Text> */}
-          <BasicButton onPress={() => atualizar()} text="Atualizar" teste />
+          <BasicButton onPress={() => atualizar()} text="Atualizar"  />
           <BasicButton onPress={() => logOut()} text="Sair" teste />
 
           {/* <View style={{marginBottom: 40}}></View> */}

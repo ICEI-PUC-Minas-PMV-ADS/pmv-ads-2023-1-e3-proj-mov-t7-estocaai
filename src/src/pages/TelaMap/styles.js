@@ -52,8 +52,14 @@ margin-left: 10px;
 `;
 
 export const ResultsView = styled.View`
+  padding-bottom: 10px;
 `;
 
 export const ResultsText = styled.Text`
   font-size: 15px;
+`;
+
+export const ErrorText = styled.Text`
+  color: red;
+  align-self: center;
 `;

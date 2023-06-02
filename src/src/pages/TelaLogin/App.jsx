@@ -22,23 +22,34 @@ import SignInput from "../../components/SignInput";
 import { useNavigation } from "@react-navigation/native";
 import { doLogin } from "../../services/authorizationService"
 
+import { useLoginReducer } from "../../reducer/inputReducer";
+
 
 export default function TelaLogin() {
   
   const [userField, setUserField] = useState('');
   const [passwordField, setPasswordField] = useState('');
-  const [erroMessage, setErroMessage] = useState(null);
+  const [erroMessage, setErroMessage] = useState({});
+
+  const [state, dispatch] = useLoginReducer();
   
   const navigation = useNavigation();
   const chamarTab = () =>
   {
-    const result = doLogin(userField, passwordField)
-    console.log(`result`)
-    console.log(result)
-    if(result){
-      navigation.navigate('MainTab');
-    }else{
-      setErroMessage('Credenciais Inválidas');
+    if(userField && passwordField){
+      const result = doLogin(userField, passwordField)
+      console.log(`result`)
+      console.log(result)
+      if(result){
+        navigation.navigate('MainTab');
+      }else{
+        dispatch({type: 'MESSAGE02'})
+        // setErroMessage('Credenciais Inválidas');
+      }
+
+    } else {
+      dispatch({type: 'MESSAGE01'})
+      // setErroMessage("Preencha os campos")
     }
   }
   return (
@@ -71,7 +82,10 @@ export default function TelaLogin() {
         <Button onPress={() => chamarTab()}>
           <ButtonText>LOGIN</ButtonText>
         </Button>
-        <Text>{erroMessage}</Text>
+        { 
+          state && 
+        <Text style={{color: 'red', alignSelf: 'center'}}>{state}</Text>
+        }
         <SignMessageButton onPress={() => navigation.reset({routes: [{name: "TelaSignUp"}]})}>
           <SignMessageButtonText>Ainda não possui uma conta?</SignMessageButtonText>
           <SignMessageButtonBold>Cadastre-se!</SignMessageButtonBold>

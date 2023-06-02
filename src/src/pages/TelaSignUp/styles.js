@@ -53,3 +53,8 @@ export const SignMessageButtonBold = styled.Text`
   font-weight: bold;
   margin-left: 5px;
 `;
+
+export const ErrorText = styled.Text`
+  color: red;
+  align-self: center;
+`;
