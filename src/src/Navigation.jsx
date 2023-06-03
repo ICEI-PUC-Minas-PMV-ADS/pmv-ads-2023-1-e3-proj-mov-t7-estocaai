@@ -14,7 +14,7 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="TelaInicial"
+        initialRouteName="MainTab"
       >
         <Stack.Screen name="TelaInicial" component={TelaInicial} />
         <Stack.Screen name="TelaLogin" component={TelaLogin} />

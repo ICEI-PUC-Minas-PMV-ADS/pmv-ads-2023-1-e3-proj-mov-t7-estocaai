@@ -1,7 +1,18 @@
 
 let storage = {
-    users : [],
-    currentUser : {}
+    users : [
+        {
+            user: 1,
+            cnpj: 1,
+            email: 'test@example.com',
+            password: 11
+        }
+    ],
+    currentUser : {
+        user: 1,
+        cnpj: 1,
+        email: 'test@example.com',
+        password: 11}
 }
 
 const checkUserExists = (cnpj) => {

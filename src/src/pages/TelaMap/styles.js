@@ -32,16 +32,46 @@ export const SearchContainer = styled.View`
   top: ${Constants.statusBarHeight}px;
 `;
 
+export const WayPointContainer = styled.View`
+  width: 100%;
+  flex-direction: row;
+`;
 
-// export const GooglePlacesAutocompleteElement = styled(GooglePlacesAutocomplete)`
+export const RemoveWayPoint = styled.View`
+`;
 
-// `;
+export const View = styled.View`
+  width: 85%;
+`;
+
+
+export const ViewCalculateActions = styled.View`
+  flex-direction: row;
+  align-items: flex-start;
+`;
+
+export const ActionRouteButton = styled.TouchableOpacity`
+  width: 10%;
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 40%;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1C2120;
+  align-self: center;
+`;
+
+export const ButtonText = styled.Text`
+  color: #ffffff;
+  font-size: 18px;
+`;
 
 export const ShowRoutesButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   background-color: #F1F1F9;
-  width: 200px;
+  margin-left: 10%;
   align-self: flex-end;
   justify-content: center;
 `;
@@ -52,8 +82,14 @@ margin-left: 10px;
 `;
 
 export const ResultsView = styled.View`
+  padding-bottom: 10px;
 `;
 
 export const ResultsText = styled.Text`
   font-size: 15px;
+`;
+
+export const ErrorText = styled.Text`
+  color: red;
+  align-self: center;
 `;

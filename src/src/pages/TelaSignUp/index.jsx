@@ -6,6 +6,8 @@ import coverImg from "../../assets/cover.png";
 import SignInput from "../../components/SignInput";
 import { useNavigation } from "@react-navigation/native";
 
+import { useLoginReducer } from "../../reducer/inputReducer";
+
 import {
   Container,
   ContentWrapper,
@@ -15,9 +17,10 @@ import {
   SignMessageButton,
   SignMessageButtonText,
   SignMessageButtonBold,
+  ErrorText,
 } from "./styles";
 
-import { createUser } from "../../services/authorizationService"
+import { createUser } from "../../services/authorizationService";
 
 export function TelaSignUp() {
   const [form, setForm] = useState({
@@ -27,6 +30,8 @@ export function TelaSignUp() {
     password: "",
   });
 
+  const [state, dispatch] = useLoginReducer();
+
   const navigation = useNavigation();
 
   const handleInputChange = (fieldName, value) => {
@@ -34,12 +39,18 @@ export function TelaSignUp() {
     // console.log(form);
   };
 
-  const doSignUp = () =>
-  {
-    console.log('sending cadastro')
-    createUser(form)
-    navigation.navigate('TelaLogin');
-  }
+  const doSignUp = () => {
+    const formValue = Object.values(form);
+    const allFieldsEmpty = formValue.some((value) => value === "");
+    if (allFieldsEmpty) {
+      dispatch({ type: "MESSAGE01" });
+      return;
+    }
+
+    console.log("sending cadastro");
+    createUser(form);
+    navigation.navigate("TelaLogin");
+  };
 
   return (
     <Container source={coverImg}>
@@ -95,6 +106,7 @@ export function TelaSignUp() {
         <Button onPress={() => doSignUp()}>
           <ButtonText>Cadastro</ButtonText>
         </Button>
+        {state && <ErrorText>{state}</ErrorText>}
       </ContentWrapper>
     </Container>
   );
