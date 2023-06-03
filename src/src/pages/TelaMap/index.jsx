@@ -9,6 +9,7 @@ import { useLoginReducer } from "../../reducer/inputReducer";
 import { getCurrentGeolocation } from "../../services/googleMapsService";
 import BasicButton from "../../components/BasicButton";
 import { traceRoute } from "./mapUtils"
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import {
   requestForegroundPermissionsAsync,
@@ -23,8 +24,13 @@ import {
   ShowRoutesButton,
   ShowRoutesButtonText,
   ResultsView,
+  View,
   ResultsText,
   ErrorText,
+  WayPointContainer,
+  ButtonText,
+  ActionRouteButton,
+  RemoveWayPoint,
 } from "./styles";
 
 const { width, height } = Dimensions.get("window");
@@ -46,7 +52,7 @@ export default function TelaMap() {
     street: "origem",
     coordinates: null
   });
-  const [destinations, setDestinations] = useState([]);
+  const [wayPoints, setWayPoints] = useState([ ]);
 
   const [destination, setDestination] = useState(null);
 
@@ -114,6 +120,23 @@ export default function TelaMap() {
     }
     // TODO: error catcher
   };
+  
+  const handleSetWayPoints = () => {
+    console.log('setWayPoints')
+    setWayPoints([
+      ...wayPoints,
+      {
+        key: wayPoints.length++,
+      }
+    ])
+  }
+
+  const handleRemoveWayPoints = (key) => {
+    console.log(key)
+    setWayPoints([
+      ...wayPoints.filter(x => x.key != key)
+    ])
+  }
 
   const onPlaceSelected = (details, flag) => {
     const set =
@@ -186,40 +209,54 @@ export default function TelaMap() {
         
       {
         origin.coordinates ? 
-        <InputAutoComplete
-          placeholder={origin.street}
-          label={"Origem"}
-          onPlacedSelected={(details) =>
-            onPlaceSelected(details, "origin")
-          }
-        />
+
+        <WayPointContainer>
+          <View>
+            <InputAutoComplete
+              placeholder={origin.street}
+              label={"Origem"}
+              onPlacedSelected={(details) =>
+                onPlaceSelected(details, "origin")
+              }
+            />
+          </View>
+          <ActionRouteButton onPress={() => handleSetWayPoints()}>
+            <ButtonText>+</ButtonText>
+          </ActionRouteButton>
+        </WayPointContainer>
         : null
       }
-        {/* <InputAutoComplete
-          placeholder="oioi"
-          label={"Origem"}
-          ref={inputRef}
-          onPlacedSelected={(details) =>
-            onPlaceSelected(details, "origin")
-          }
-        /> */}
+
+
+      {
+        wayPoints.map(wayPoints => (
+          <WayPointContainer>
+            <View>
+              <InputAutoComplete
+                  key={wayPoints.key}
+                  placeholder="Digite sua parada"
+                  label={"Parada"}
+                  onPlacedSelected={(details) =>
+                    onPlaceSelected(details, "destination")
+                  }
+                />
+              </View>
+              <ActionRouteButton onPress={() => handleRemoveWayPoints(wayPoints.key)}>
+                <ButtonText>-</ButtonText>
+              </ActionRouteButton>
+          </WayPointContainer>
+        ))
+      }
 
         <InputAutoComplete
-          placeholder="escreva segundo destino"
+          placeholder="Digite seu destino"
           label={"Destino"}
           onPlacedSelected={(details) =>
             onPlaceSelected(details, "destination")
           }
         />
 
-        <BasicButton  text="+" />
-        {/* <InputAutoComplete
-          placeholder="escreva o destino"
-          label={"Destino 2"}
-          onPlacedSelected={(details) => {
-            onPlaceSelected(details, "destination03");
-          }}
-        /> */}
+        
         {distance ? (
           <ResultsView>
             <ResultsText>
