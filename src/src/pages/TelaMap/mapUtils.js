@@ -18,17 +18,20 @@ export const traceRoute = async (origin, destination, wayPoints) => {
     if (origin && destination) {
       const originFormated = formatCoordinates(origin.coordinates);
       const destinationFormated = formatCoordinates(destination.coordinates);
+      let wayPointsFormated = null;
 
-      if(wayPoints.lenght > 0){
-        const wayPoints = wayPoints.map(wayPoint => formatCoordinates(wayPoint.coordinates))
+      if(wayPoints.length > 0){
+        wayPointsFormated = wayPoints.map(wayPoint => formatCoordinates(wayPoint.coordinates))
+        console.log("new wayPoints")
+        console.log(wayPointsFormated)
   
-        console.log(wayPoints)
       }
 
       try {
         const { distance, fastest_Route } = await getRouteMetrics(
           originFormated,
-          destinationFormated
+          destinationFormated,
+          wayPointsFormated
         );
         const decodedPolyline = polyline.decode(
           fastest_Route.overview_polyline.points

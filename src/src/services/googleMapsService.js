@@ -24,8 +24,13 @@ export const getCurrentGeolocation = (latitude, longitude) => {
     return result;
   }
 
-  export const getRouteMetrics = (origin, destination) => {
-    const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${GOOGLE_MAPS_API_KEY}`;
+  export const getRouteMetrics = (origin, destination, wayPointsFormated) => {
+    let url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${GOOGLE_MAPS_API_KEY}`;
+    console.log("==== getRouteMetrics")
+    console.log(wayPointsFormated)
+    if(wayPointsFormated){
+      url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&waypoints=${wayPointsFormated[0]}&destination=${destination}&key=${GOOGLE_MAPS_API_KEY}`;
+    }
   
     const result = fetch(url)
     .then(response => response.json())
