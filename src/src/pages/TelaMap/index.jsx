@@ -8,7 +8,7 @@ import MapViewDirections from "react-native-maps-directions";
 import { useLoginReducer } from "../../reducer/inputReducer";
 import { getCurrentGeolocation } from "../../services/googleMapsService";
 import BasicButton from "../../components/BasicButton";
-import { traceRoute } from "./mapUtils"
+import { getPosition, traceRoute } from "./mapUtils"
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import {
@@ -54,7 +54,9 @@ export default function TelaMap() {
   });
   const [wayPoints, setWayPoints] = useState([ ]);
 
-  const [destination, setDestination] = useState(null);
+  const [destination, setDestination] = useState({
+    coordinates: null
+  });
 
   const [fastestRoute, setFastestRoute] = useState([]);
   const [showDirection, setShowDirection] = useState(false);
@@ -102,7 +104,7 @@ export default function TelaMap() {
   // };
 
   const drawRoute = async () => {
-    const { coordinates, distance } = await traceRoute(origin, destination)
+    const { coordinates, distance } = await traceRoute(origin, destination, wayPoints)
 
     if(coordinates && distance){
       setShowDirection(true);
@@ -121,8 +123,7 @@ export default function TelaMap() {
     // TODO: error catcher
   };
   
-  const handleSetWayPoints = () => {
-    console.log('setWayPoints')
+  const handleSetNewWayPoints = () => {
     setWayPoints([
       ...wayPoints,
       {
@@ -132,26 +133,16 @@ export default function TelaMap() {
   }
 
   const handleRemoveWayPoints = (key) => {
-    console.log(key)
     setWayPoints([
       ...wayPoints.filter(x => x.key != key)
     ])
   }
 
-  const onPlaceSelected = (details, flag) => {
-    const set =
-      flag === "origin"
-        ? setOrigin
-        : flag === "destination"
-        ? setDestination
-        : setDestination03;
-
-    const position = {
-      latitude: details?.geometry.location.lat || 0,
-      longitude: details?.geometry.location.lng || 0,
-    };
-
-    set(position);
+  const onPlaceSelected = (details, fnc) => {
+    const position = getPosition(details)
+    fnc({
+      coordinates: position
+    })
     moveTo(position);
   };
 
@@ -173,7 +164,7 @@ export default function TelaMap() {
         }
       >
         {origin.coordinates != null ? <Marker coordinate={origin.coordinates} /> : null}
-        {destination && <Marker coordinate={destination} />}
+        {destination.coordinates != null ? <Marker coordinate={destination.coordinates} /> : null}
 
         {/* {(showDirection &&
           destination01 &&
@@ -216,18 +207,18 @@ export default function TelaMap() {
               placeholder={origin.street}
               label={"Origem"}
               onPlacedSelected={(details) =>
-                onPlaceSelected(details, "origin")
+                onPlaceSelected(details, setOrigin)
               }
             />
           </View>
-          <ActionRouteButton onPress={() => handleSetWayPoints()}>
+          <ActionRouteButton onPress={() => handleSetNewWayPoints()}>
             <ButtonText>+</ButtonText>
           </ActionRouteButton>
         </WayPointContainer>
         : null
       }
 
-
+      {/* PARADAS ===================================  */}
       {
         wayPoints.map(wayPoints => (
           <WayPointContainer>
@@ -237,7 +228,7 @@ export default function TelaMap() {
                   placeholder="Digite sua parada"
                   label={"Parada"}
                   onPlacedSelected={(details) =>
-                    onPlaceSelected(details, "destination")
+                    onPlaceSelected(details, setWayPoints)
                   }
                 />
               </View>
@@ -248,11 +239,12 @@ export default function TelaMap() {
         ))
       }
 
+      {/* DESTINO =================================== */}
         <InputAutoComplete
           placeholder="Digite seu destino"
           label={"Destino"}
           onPlacedSelected={(details) =>
-            onPlaceSelected(details, "destination")
+            onPlaceSelected(details, setDestination)
           }
         />
 

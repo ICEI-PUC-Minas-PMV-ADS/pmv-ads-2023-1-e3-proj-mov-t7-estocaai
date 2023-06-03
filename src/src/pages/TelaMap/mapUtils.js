@@ -1,16 +1,29 @@
 import { getRouteMetrics } from "../../services/googleMapsService";
 import polyline from "@mapbox/polyline";
 
+export const getPosition = (data) => {
+  const latitude = data?.geometry.location.lat || 0;
+  const longitude = data?.geometry.location.lng || 0;
+  
+  return { latitude, longitude }
+};
+
 export const formatCoordinates = (data) => {
     const { latitude, longitude } = data;
     return `${latitude},${longitude}`;
 };
 
 
-export const traceRoute = async (origin, destination) => {
+export const traceRoute = async (origin, destination, wayPoints) => {
     if (origin && destination) {
       const originFormated = formatCoordinates(origin.coordinates);
-      const destinationFormated = formatCoordinates(destination);
+      const destinationFormated = formatCoordinates(destination.coordinates);
+
+      if(wayPoints.lenght > 0){
+        const wayPoints = wayPoints.map(wayPoint => formatCoordinates(wayPoint.coordinates))
+  
+        console.log(wayPoints)
+      }
 
       try {
         const { distance, fastest_Route } = await getRouteMetrics(
@@ -25,7 +38,7 @@ export const traceRoute = async (origin, destination) => {
           longitude,
         }));
 
-        return { coordinates:coordinates, distance: distance }
+        return { coordinates, distance }
       } catch (e) {
         console.log(e);
       }
