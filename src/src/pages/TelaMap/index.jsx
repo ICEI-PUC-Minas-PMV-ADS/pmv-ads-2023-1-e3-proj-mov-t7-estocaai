@@ -6,8 +6,7 @@ import { Marker, PROVIDER_GOOGLE, Polyline } from "react-native-maps";
 import InputAutoComplete from "../../components/InputAutoComplete";
 import MapViewDirections from "react-native-maps-directions";
 import { useLoginReducer } from "../../reducer/inputReducer";
-import { getGeolocation } from "../../services/getGeolocation";
-import { getCurrentGeolocation } from "../../services/googleMapsService";
+import { getCurrentGeolocation, getRouteMetrics } from "../../services/googleMapsService";
 import polyline from "@mapbox/polyline";
 import BasicButton from "../../components/BasicButton";
 
@@ -34,10 +33,22 @@ const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.02;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
+type Address = {
+  street: string,
+  coordinates?: {
+    latitude: string,
+    longitude: string
+  }
+};
+
 export default function TelaMap() {
-  const [location, setLocation] = useState(null);
-  const [origin, setOrigin] = useState(null);
-  const [destination02, setDestination02] = useState(null);
+  const [origin, setOrigin] = useState({
+    street: "origem",
+    coordinates: null
+  });
+  const [destinations, setDestinations] = useState([]);
+
+  const [destination, setDestination] = useState(null);
   const [destination03, setDestination03] = useState(null);
   const [fastestRoute, setFastestRoute] = useState([]);
   const [showDirection, setShowDirection] = useState(false);
@@ -53,20 +64,21 @@ export default function TelaMap() {
   useEffect(() => {
     async function requestLocationPermissions() {
       const { granted } = await requestForegroundPermissionsAsync();
-      console.log("oi")
       if (granted) {
         const currentposition = await getCurrentPositionAsync();
-        setLocation(currentposition);
+        const streetAddress = await getCurrentGeolocation(currentposition.coords.latitude, currentposition.coords.longitude)
         setOrigin({
+          street: streetAddress,
+          coordinates: {
             latitude: currentposition.coords.latitude,
             longitude: currentposition.coords.longitude
+          }
         });
-        // console.log(getCurrentGeolocation(currentposition.coords.latitude, currentposition.coords.longitude));
       }
     }
-
     requestLocationPermissions();
   }, []);
+
 
   const moveTo = async (position) => {
     const camera = await mapRef.current?.getCamera();
@@ -89,20 +101,17 @@ export default function TelaMap() {
   };
 
   const traceRoute = async () => {
-    // if (origin && destination02 && destination03) {
-    if (origin && destination02) {
+    if (origin && destination) {
       setShowDirection(true);
 
-      const originFormated = formatCoordinates(origin);
-      const destination02Formated = formatCoordinates(destination02);
-      // const destination03Formated = formatCoordinates(destination03);
+      const originFormated = formatCoordinates(origin.coordinates);
+      const destinationFormated = formatCoordinates(destination);
 
       try {
-        const { distance, fastest_Route } = await getGeolocation(
+        const { distance, fastest_Route } = await getRouteMetrics(
           originFormated,
-          destination02Formated
+          destinationFormated
         );
-
         const decodedPolyline = polyline.decode(
           fastest_Route.overview_polyline.points
         );
@@ -135,8 +144,8 @@ export default function TelaMap() {
     const set =
       flag === "origin"
         ? setOrigin
-        : flag === "destination02"
-        ? setDestination02
+        : flag === "destination"
+        ? setDestination
         : setDestination03;
 
     const position = {
@@ -157,16 +166,16 @@ export default function TelaMap() {
         provider={PROVIDER_GOOGLE}
         loadingEnabled
         initialRegion={
-          location && {
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude,
+          origin.coordinates && {
+            latitude: origin.coordinates.latitude,
+            longitude: origin.coordinates.longitude,
             latitudeDelta: LATITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA,
           }
         }
       >
-        {origin && <Marker coordinate={origin} />}
-        {destination02 && <Marker coordinate={destination02} />}
+        {origin.coordinates != null ? <Marker coordinate={origin.coordinates} /> : null}
+        {destination && <Marker coordinate={destination} />}
 
         {/* {(showDirection &&
           destination01 &&
@@ -199,19 +208,32 @@ export default function TelaMap() {
           color="#1C2120"
           onPress={() => navigation.navigate("Home")}
         />
+        
+      {
+        origin.coordinates ? 
         <InputAutoComplete
-          placeholder="origem"
+          placeholder={origin.street}
           label={"Origem"}
           onPlacedSelected={(details) =>
             onPlaceSelected(details, "origin")
           }
         />
+        : null
+      }
+        {/* <InputAutoComplete
+          placeholder="oioi"
+          label={"Origem"}
+          ref={inputRef}
+          onPlacedSelected={(details) =>
+            onPlaceSelected(details, "origin")
+          }
+        /> */}
 
         <InputAutoComplete
           placeholder="escreva segundo destino"
           label={"Destino"}
           onPlacedSelected={(details) =>
-            onPlaceSelected(details, "destination02")
+            onPlaceSelected(details, "destination")
           }
         />
 
@@ -251,8 +273,8 @@ export default function TelaMap() {
           const camera = await mapRef.current?.getCamera();
           if (camera) {
             const position = {
-              latitude: location.coords.latitude,
-              longitude: location.coords.longitude,
+              latitude: origin.coordinates.latitude,
+              longitude: origin.coordinates.longitude,
             };
             camera.center = position;
             mapRef.current.animateCamera(camera, { duration: 1000 });
