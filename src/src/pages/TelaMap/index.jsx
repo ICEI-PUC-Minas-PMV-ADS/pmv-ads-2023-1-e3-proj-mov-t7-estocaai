@@ -52,7 +52,7 @@ export default function TelaMap() {
     street: "origem",
     coordinates: null
   });
-  const [wayPoints, setWayPoints] = useState([ ]);
+  const [wayPoints, setWayPoints] = useState([]);
 
   const [destination, setDestination] = useState({
     coordinates: null
@@ -85,8 +85,14 @@ export default function TelaMap() {
       }
     }
     requestLocationPermissions();
+
   }, []);
 
+  useEffect(() => {
+    console.log(">> wayPoints")
+    console.log(wayPoints)
+    console.log(wayPoints.length)
+  }, [wayPoints]);
 
   const moveTo = async (position) => {
     const camera = await mapRef.current?.getCamera();
@@ -124,6 +130,7 @@ export default function TelaMap() {
   };
   
   const handleSetNewWayPoints = () => {
+    console.log("====== handleSetNewWayPoints")
     setWayPoints([
       ...wayPoints,
       {
@@ -146,6 +153,17 @@ export default function TelaMap() {
     moveTo(position);
   };
 
+  const onWayPointSelected = (wayPoint, details) => {
+    const position = getPosition(details)
+    console.log(wayPoint)
+    wayPoints.filter(x => x.key === wayPoint.key).map(x => x.coordinates = position)
+    setWayPoints([
+      ...wayPoints,
+    ])
+    moveTo(position);
+  };
+
+
   return (
     <Container>
       <StatusBar style="dark" />
@@ -165,6 +183,15 @@ export default function TelaMap() {
       >
         {origin.coordinates != null ? <Marker coordinate={origin.coordinates} /> : null}
         {destination.coordinates != null ? <Marker coordinate={destination.coordinates} /> : null}
+        {
+          wayPoints.length > 0 ? 
+          wayPoints.map(wayPoint => wayPoint.coordinates ?
+            (
+            <Marker coordinate={wayPoint.coordinates} />
+            ) : null
+          )
+          : null
+        }
 
         {/* {(showDirection &&
           destination01 &&
@@ -220,19 +247,19 @@ export default function TelaMap() {
 
       {/* PARADAS ===================================  */}
       {
-        wayPoints.map(wayPoints => (
+        wayPoints.map(wayPoint => (
           <WayPointContainer>
             <View>
               <InputAutoComplete
-                  key={wayPoints.key}
+                  key={wayPoint.key}
                   placeholder="Digite sua parada"
                   label={"Parada"}
                   onPlacedSelected={(details) =>
-                    onPlaceSelected(details, setWayPoints)
+                    onWayPointSelected(wayPoint, details)
                   }
                 />
               </View>
-              <ActionRouteButton onPress={() => handleRemoveWayPoints(wayPoints.key)}>
+              <ActionRouteButton onPress={() => handleRemoveWayPoints(wayPoint.key)}>
                 <ButtonText>-</ButtonText>
               </ActionRouteButton>
           </WayPointContainer>
