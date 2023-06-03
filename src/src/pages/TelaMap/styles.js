@@ -44,6 +44,12 @@ export const View = styled.View`
   width: 85%;
 `;
 
+
+export const ViewCalculateActions = styled.View`
+  flex-direction: row;
+  align-items: flex-start;
+`;
+
 export const ActionRouteButton = styled.TouchableOpacity`
   width: 10%;
   margin-left: 5%;
@@ -65,7 +71,7 @@ export const ShowRoutesButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   background-color: #F1F1F9;
-  width: 200px;
+  margin-left: 10%;
   align-self: flex-end;
   justify-content: center;
 `;

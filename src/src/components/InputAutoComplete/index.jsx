@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Text } from 'react-native';
 import { GOOGLE_MAPS_API_KEY } from "../../constants"
 
@@ -11,11 +11,25 @@ export default function InputAutoComplete({
   placeholder,
   onPlacedSelected
 }){
+  const ref = useRef();
+
+  useEffect(() => {
+    console.log("mudando")
+    ref.current?.setAddressText(placeholder);
+  }, []);
+
+  useEffect(() => {
+    console.log("mudando")
+    ref.current?.setAddressText(placeholder);
+  }, [placeholder]);
+
+  console.log("=====================  placeholder");
+  console.log(placeholder);
   return (
     <>
       <Text>{label}</Text>
       <GooglePlacesAutocompleteElement
-          placeholder={placeholder || ""}
+          ref={ref}
           onPress={(data, details = null) => {
             onPlacedSelected( details);
           }}

@@ -31,6 +31,7 @@ import {
   ButtonText,
   ActionRouteButton,
   RemoveWayPoint,
+  ViewCalculateActions
 } from "./styles";
 
 const { width, height } = Dimensions.get("window");
@@ -55,6 +56,7 @@ export default function TelaMap() {
   const [wayPoints, setWayPoints] = useState([]);
 
   const [destination, setDestination] = useState({
+    street: "Digite seu destino",
     coordinates: null
   });
 
@@ -88,11 +90,14 @@ export default function TelaMap() {
 
   }, []);
 
+
   useEffect(() => {
-    console.log(">> wayPoints")
-    console.log(wayPoints)
-    console.log(wayPoints.length)
-  }, [wayPoints]);
+    console.log({
+      origem: origin,
+      destino: destination
+    })
+  }, [origin, destination]);
+
 
   const moveTo = async (position) => {
     const camera = await mapRef.current?.getCamera();
@@ -102,12 +107,23 @@ export default function TelaMap() {
     }
   };
 
-  // const traceRouteOnReady = (args) => {
-  //   if (args) {
-  //     setDistance(args.distance);
-  //     setDuration(args.duration);
-  //   }
-  // };
+  const handleSetDestination = async (newDestination) => {
+    console.log("======== newDestination")
+    console.log(newDestination)
+    const streetAddress = await getCurrentGeolocation(newDestination.coordinates.latitude, newDestination.coordinates.longitude)
+    setDestination({
+      street: streetAddress,
+      coordinates: newDestination.coordinates
+    })
+  }
+
+  const invertRoute = () => {
+    const newDestination = origin
+    const newOrigin = destination
+    setDestination(newDestination)
+    setOrigin(newOrigin)
+    moveTo(newDestination.coordinates)
+  }
 
   const drawRoute = async () => {
     const { coordinates, distance } = await traceRoute(origin, destination, wayPoints)
@@ -130,7 +146,6 @@ export default function TelaMap() {
   };
   
   const handleSetNewWayPoints = () => {
-    console.log("====== handleSetNewWayPoints")
     setWayPoints([
       ...wayPoints,
       {
@@ -193,21 +208,6 @@ export default function TelaMap() {
           : null
         }
 
-        {/* {(showDirection &&
-          destination01 &&
-          destination03 &&     
-          destination02) &&(
-            <MapViewDirections
-              origin={destination01}
-              destination={destination03}
-              waypoints={[destination02]}
-              apikey={"AIzaSyA9gDzEJ-0yzGfVKvC82X7gfK2G8S2RIs8"}
-              strokeWidth={3}
-              strokeColor="hotpink"
-              onReady={traceRouteOnReady}
-            />
-          )} */}
-
         {fastestRoute && (
           <Polyline
             coordinates={fastestRoute}
@@ -268,10 +268,10 @@ export default function TelaMap() {
 
       {/* DESTINO =================================== */}
         <InputAutoComplete
-          placeholder="Digite seu destino"
+          placeholder={destination.street}
           label={"Destino"}
           onPlacedSelected={(details) =>
-            onPlaceSelected(details, setDestination)
+            onPlaceSelected(details, handleSetDestination)
           }
         />
 
@@ -287,15 +287,28 @@ export default function TelaMap() {
           <ErrorText>{state}</ErrorText>
         )}
 
-        <ShowRoutesButton onPress={drawRoute}>
-          <FontAwesome5
-            name="route"
-            size={25}
-            color="#1C2120"
-            onPress={() => {}}
-          />
-          <ShowRoutesButtonText>Calcular rotas</ShowRoutesButtonText>
-        </ShowRoutesButton>
+      {/* Botoes de calculo =================================== */}
+        <ViewCalculateActions>
+          <ShowRoutesButton onPress={invertRoute}>
+            <FontAwesome5
+              name="retweet"
+              size={20}
+              color="#1C2120"
+              onPress={() => {}}
+            />
+            <ShowRoutesButtonText>Inverter</ShowRoutesButtonText>
+          </ShowRoutesButton>
+
+          <ShowRoutesButton onPress={drawRoute}>
+            <FontAwesome5
+              name="route"
+              size={20}
+              color="#1C2120"
+              onPress={() => {}}
+            />
+            <ShowRoutesButtonText>Calcular rotas</ShowRoutesButtonText>
+          </ShowRoutesButton>
+        </ViewCalculateActions>
       </SearchContainer>
 
       <TouchableOpacity

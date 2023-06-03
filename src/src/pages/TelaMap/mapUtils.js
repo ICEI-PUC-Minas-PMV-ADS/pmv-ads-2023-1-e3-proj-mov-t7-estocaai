@@ -21,10 +21,7 @@ export const traceRoute = async (origin, destination, wayPoints) => {
       let wayPointsFormated = null;
 
       if(wayPoints.length > 0){
-        wayPointsFormated = wayPoints.map(wayPoint => formatCoordinates(wayPoint.coordinates))
-        console.log("new wayPoints")
-        console.log(wayPointsFormated)
-  
+        wayPointsFormated = wayPoints.map(wayPoint => formatCoordinates(wayPoint.coordinates))  
       }
 
       try {
