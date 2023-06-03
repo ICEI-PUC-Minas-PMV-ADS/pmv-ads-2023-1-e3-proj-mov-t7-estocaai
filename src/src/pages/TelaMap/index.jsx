@@ -6,9 +6,9 @@ import { Marker, PROVIDER_GOOGLE, Polyline } from "react-native-maps";
 import InputAutoComplete from "../../components/InputAutoComplete";
 import MapViewDirections from "react-native-maps-directions";
 import { useLoginReducer } from "../../reducer/inputReducer";
-import { getCurrentGeolocation, getRouteMetrics } from "../../services/googleMapsService";
-import polyline from "@mapbox/polyline";
+import { getCurrentGeolocation } from "../../services/googleMapsService";
 import BasicButton from "../../components/BasicButton";
+import { traceRoute } from "./mapUtils"
 
 import {
   requestForegroundPermissionsAsync,
@@ -49,7 +49,7 @@ export default function TelaMap() {
   const [destinations, setDestinations] = useState([]);
 
   const [destination, setDestination] = useState(null);
-  const [destination03, setDestination03] = useState(null);
+
   const [fastestRoute, setFastestRoute] = useState([]);
   const [showDirection, setShowDirection] = useState(false);
   const [distance, setDistance] = useState(0);
@@ -59,7 +59,7 @@ export default function TelaMap() {
 
   const navigation = useNavigation();
 
-  const [state, dispatch] = useLoginReducer();
+  const [state, dispatch] = useLoginReducer(); // TODO: aparentemente esse é o ERROR
 
   useEffect(() => {
     async function requestLocationPermissions() {
@@ -95,49 +95,24 @@ export default function TelaMap() {
   //   }
   // };
 
-  const formatCoordinates = (data) => {
-    const { latitude, longitude } = data;
-    return `${latitude},${longitude}`;
-  };
+  const drawRoute = async () => {
+    const { coordinates, distance } = await traceRoute(origin, destination)
 
-  const traceRoute = async () => {
-    if (origin && destination) {
+    if(coordinates && distance){
       setShowDirection(true);
-
-      const originFormated = formatCoordinates(origin.coordinates);
-      const destinationFormated = formatCoordinates(destination);
-
-      try {
-        const { distance, fastest_Route } = await getRouteMetrics(
-          originFormated,
-          destinationFormated
-        );
-        const decodedPolyline = polyline.decode(
-          fastest_Route.overview_polyline.points
-        );
-        const coordinates = decodedPolyline.map(([latitude, longitude]) => ({
-          latitude,
-          longitude,
-        }));
-
-        setFastestRoute(coordinates);
-        setDistance(distance);
-        console.log(decodedPolyline)
-
-        mapRef.current?.fitToCoordinates(fastestRoute, {
-          edgePadding: {
-            top: 370,
-            right: 60,
-            bottom: 40,
-            left: 60,
-          },
-        });
-      } catch (e) {
-        console.log(e);
-      }
-    } else {
-      dispatch({type: "MESSAGE03"})
+      setFastestRoute(coordinates);
+      setDistance(distance);
+  
+      mapRef.current?.fitToCoordinates(fastestRoute, {
+        edgePadding: {
+          top: 370,
+          right: 60,
+          bottom: 40,
+          left: 60,
+        },
+      });
     }
+    // TODO: error catcher
   };
 
   const onPlaceSelected = (details, flag) => {
@@ -256,13 +231,12 @@ export default function TelaMap() {
           <ErrorText>{state}</ErrorText>
         )}
 
-        <ShowRoutesButton onPress={traceRoute}>
+        <ShowRoutesButton onPress={drawRoute}>
           <FontAwesome5
             name="route"
             size={25}
             color="#1C2120"
             onPress={() => {}}
-            // style={{ alignSelf: "flex-end", marginTop: 6 }}
           />
           <ShowRoutesButtonText>Calcular rotas</ShowRoutesButtonText>
         </ShowRoutesButton>
