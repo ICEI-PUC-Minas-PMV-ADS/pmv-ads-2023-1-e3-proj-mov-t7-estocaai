@@ -1,5 +1,5 @@
 export const getGeolocation = (destination1 ,destination2, destination3) => {
-  const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${destination1}&destination=${destination2}&waypoints=${destination3}&key=AIzaSyA9gDzEJ-0yzGfVKvC82X7gfK2G8S2RIs8`;
+  const url = `https://maps.googleapis.com/maps/api/geocode/json?origin=${destination1}&destination=${destination2}&waypoints=${destination3}&key=AIzaSyA9gDzEJ-0yzGfVKvC82X7gfK2G8S2RIs8`;
 
   const result = fetch(url)
   .then(response => response.json())
