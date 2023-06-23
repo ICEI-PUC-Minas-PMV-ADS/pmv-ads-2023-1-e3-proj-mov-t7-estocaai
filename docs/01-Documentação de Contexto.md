@@ -24,7 +24,7 @@ Segundo VMISecurity um dos maiores desafios enfrentados pelas empresas no quesit
 
 ## Público-Alvo
 
-Estabeleceu-se como público-alvo desta solução todo negócio que tem estoque, seja este fabricante ou distribuidora de um produto, bem mesmo prestador de um serviço.
+Estabeleceu-se como público-alvo desta solução todo negócio, seja este fabricante ou distribuidora de um produto, bem mesmo prestador de um serviço de deseja otimizar seu serviço na qualidade de logística
 
 ##  Referências
 
