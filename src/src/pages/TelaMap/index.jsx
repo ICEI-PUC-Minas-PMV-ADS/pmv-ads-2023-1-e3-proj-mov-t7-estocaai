@@ -8,7 +8,7 @@ import MapViewDirections from "react-native-maps-directions";
 import { useLoginReducer } from "../../reducer/inputReducer";
 import { getCurrentGeolocation } from "../../services/googleMapsService";
 import BasicButton from "../../components/BasicButton";
-import { getPosition, traceRoute } from "./mapUtils"
+import { getPosition, traceRoute } from "./mapUtils";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import {
@@ -31,7 +31,7 @@ import {
   ButtonText,
   ActionRouteButton,
   RemoveWayPoint,
-  ViewCalculateActions
+  ViewCalculateActions,
 } from "./styles";
 
 const { width, height } = Dimensions.get("window");
@@ -51,13 +51,13 @@ type Address = {
 export default function TelaMap() {
   const [origin, setOrigin] = useState({
     street: "origem",
-    coordinates: null
+    coordinates: null,
   });
   const [wayPoints, setWayPoints] = useState([]);
 
   const [destination, setDestination] = useState({
     street: "Digite seu destino",
-    coordinates: null
+    coordinates: null,
   });
 
   const [fastestRoute, setFastestRoute] = useState([]);
@@ -76,28 +76,28 @@ export default function TelaMap() {
       const { granted } = await requestForegroundPermissionsAsync();
       if (granted) {
         const currentposition = await getCurrentPositionAsync();
-        const streetAddress = await getCurrentGeolocation(currentposition.coords.latitude, currentposition.coords.longitude)
+        const streetAddress = await getCurrentGeolocation(
+          currentposition.coords.latitude,
+          currentposition.coords.longitude
+        );
         setOrigin({
           street: streetAddress,
           coordinates: {
             latitude: currentposition.coords.latitude,
-            longitude: currentposition.coords.longitude
-          }
+            longitude: currentposition.coords.longitude,
+          },
         });
       }
     }
     requestLocationPermissions();
-
   }, []);
-
 
   useEffect(() => {
     console.log({
       origem: origin,
-      destino: destination
-    })
+      destino: destination,
+    });
   }, [origin, destination]);
-
 
   const moveTo = async (position) => {
     const camera = await mapRef.current?.getCamera();
@@ -108,31 +108,38 @@ export default function TelaMap() {
   };
 
   const handleSetDestination = async (newDestination) => {
-    console.log("======== newDestination")
-    console.log(newDestination)
-    const streetAddress = await getCurrentGeolocation(newDestination.coordinates.latitude, newDestination.coordinates.longitude)
+    console.log("======== newDestination");
+    console.log(newDestination);
+    const streetAddress = await getCurrentGeolocation(
+      newDestination.coordinates.latitude,
+      newDestination.coordinates.longitude
+    );
     setDestination({
       street: streetAddress,
-      coordinates: newDestination.coordinates
-    })
-  }
+      coordinates: newDestination.coordinates,
+    });
+  };
 
   const invertRoute = () => {
-    const newDestination = origin
-    const newOrigin = destination
-    setDestination(newDestination)
-    setOrigin(newOrigin)
-    moveTo(newDestination.coordinates)
-  }
+    const newDestination = origin;
+    const newOrigin = destination;
+    setDestination(newDestination);
+    setOrigin(newOrigin);
+    moveTo(newDestination.coordinates);
+  };
 
   const drawRoute = async () => {
-    const { coordinates, distance } = await traceRoute(origin, destination, wayPoints)
+    const { coordinates, distance } = await traceRoute(
+      origin,
+      destination,
+      wayPoints
+    );
 
-    if(coordinates && distance){
+    if (coordinates && distance) {
       setShowDirection(true);
       setFastestRoute(coordinates);
       setDistance(distance);
-  
+
       mapRef.current?.fitToCoordinates(fastestRoute, {
         edgePadding: {
           top: 370,
@@ -144,40 +151,37 @@ export default function TelaMap() {
     }
     // TODO: error catcher
   };
-  
+
   const handleSetNewWayPoints = () => {
     setWayPoints([
       ...wayPoints,
       {
         key: wayPoints.length++,
-      }
-    ])
-  }
+      },
+    ]);
+  };
 
   const handleRemoveWayPoints = (key) => {
-    setWayPoints([
-      ...wayPoints.filter(x => x.key != key)
-    ])
-  }
+    setWayPoints([...wayPoints.filter((x) => x.key != key)]);
+  };
 
   const onPlaceSelected = (details, fnc) => {
-    const position = getPosition(details)
+    const position = getPosition(details);
     fnc({
-      coordinates: position
-    })
+      coordinates: position,
+    });
     moveTo(position);
   };
 
   const onWayPointSelected = (wayPoint, details) => {
-    const position = getPosition(details)
-    console.log(wayPoint)
-    wayPoints.filter(x => x.key === wayPoint.key).map(x => x.coordinates = position)
-    setWayPoints([
-      ...wayPoints,
-    ])
+    const position = getPosition(details);
+    console.log(wayPoint);
+    wayPoints
+      .filter((x) => x.key === wayPoint.key)
+      .map((x) => (x.coordinates = position));
+    setWayPoints([...wayPoints]);
     moveTo(position);
   };
-
 
   return (
     <Container>
@@ -196,17 +200,19 @@ export default function TelaMap() {
           }
         }
       >
-        {origin.coordinates != null ? <Marker coordinate={origin.coordinates} /> : null}
-        {destination.coordinates != null ? <Marker coordinate={destination.coordinates} /> : null}
-        {
-          wayPoints.length > 0 ? 
-          wayPoints.map(wayPoint => wayPoint.coordinates ?
-            (
-            <Marker coordinate={wayPoint.coordinates} />
-            ) : null
-          )
-          : null
-        }
+        {origin.coordinates != null ? (
+          <Marker coordinate={origin.coordinates} />
+        ) : null}
+        {destination.coordinates != null ? (
+          <Marker coordinate={destination.coordinates} />
+        ) : null}
+        {wayPoints.length > 0
+          ? wayPoints.map((wayPoint) =>
+              wayPoint.coordinates ? (
+                <Marker coordinate={wayPoint.coordinates} />
+              ) : null
+            )
+          : null}
 
         {fastestRoute && (
           <Polyline
@@ -217,56 +223,53 @@ export default function TelaMap() {
         )}
       </Map>
 
-      <SearchContainer>
+      <SearchContainer style={wayPoints.length == !0 ? { height: 320 } : {}}>
         <AntDesign
           name="arrowleft"
           size={35}
           color="#1C2120"
           onPress={() => navigation.navigate("Home")}
         />
-        
-      {
-        origin.coordinates ? 
 
-        <WayPointContainer>
-          <View>
-            <InputAutoComplete
-              placeholder={origin.street}
-              label={"Origem"}
-              onPlacedSelected={(details) =>
-                onPlaceSelected(details, setOrigin)
-              }
-            />
-          </View>
-          <ActionRouteButton onPress={() => handleSetNewWayPoints()}>
-            <ButtonText>+</ButtonText>
-          </ActionRouteButton>
-        </WayPointContainer>
-        : null
-      }
-
-      {/* PARADAS ===================================  */}
-      {
-        wayPoints.map(wayPoint => (
+        {origin.coordinates ? (
           <WayPointContainer>
             <View>
               <InputAutoComplete
-                  key={wayPoint.key}
-                  placeholder="Digite sua parada"
-                  label={"Parada"}
-                  onPlacedSelected={(details) =>
-                    onWayPointSelected(wayPoint, details)
-                  }
-                />
-              </View>
-              <ActionRouteButton onPress={() => handleRemoveWayPoints(wayPoint.key)}>
-                <ButtonText>-</ButtonText>
-              </ActionRouteButton>
+                placeholder={origin.street}
+                label={"Origem"}
+                onPlacedSelected={(details) =>
+                  onPlaceSelected(details, setOrigin)
+                }
+              />
+            </View>
+            <ActionRouteButton onPress={() => handleSetNewWayPoints()}>
+              <ButtonText>+</ButtonText>
+            </ActionRouteButton>
           </WayPointContainer>
-        ))
-      }
+        ) : null}
 
-      {/* DESTINO =================================== */}
+        {/* PARADAS ===================================  */}
+        {wayPoints.map((wayPoint) => (
+          <WayPointContainer key={Math.random()}>
+            <View>
+              <InputAutoComplete
+                key={wayPoint.key}
+                placeholder="Digite sua parada"
+                label={"Parada"}
+                onPlacedSelected={(details) =>
+                  onWayPointSelected(wayPoint, details)
+                }
+              />
+            </View>
+            <ActionRouteButton
+              onPress={() => handleRemoveWayPoints(wayPoint.key)}
+            >
+              <ButtonText>-</ButtonText>
+            </ActionRouteButton>
+          </WayPointContainer>
+        ))}
+
+        {/* DESTINO =================================== */}
         <InputAutoComplete
           placeholder={destination.street}
           label={"Destino"}
@@ -275,7 +278,6 @@ export default function TelaMap() {
           }
         />
 
-        
         {distance ? (
           <ResultsView>
             <ResultsText>
@@ -287,7 +289,7 @@ export default function TelaMap() {
           <ErrorText>{state}</ErrorText>
         )}
 
-      {/* Botoes de calculo =================================== */}
+        {/* Botoes de calculo =================================== */}
         <ViewCalculateActions>
           <ShowRoutesButton onPress={invertRoute}>
             <FontAwesome5
